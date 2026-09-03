@@ -1,0 +1,63 @@
+---
+interface Item {
+  id: string;
+  label: string;
+}
+
+interface Props {
+  items: Item[];
+}
+
+const { items } = Astro.props;
+---
+
+{
+  items.length > 0 && (
+    <nav class="app-toc" aria-label="On this page">
+      <div class="wrap">
+        <ul class="app-toc__list">
+          {items.map((item) => (
+            <li>
+              <a href={`#${item.id}`}>{item.label}</a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </nav>
+  )
+}
+
+<script>
+  function initAppToc() {
+    const toc = document.querySelector('.app-toc');
+    if (!toc) return;
+
+    const links = [...toc.querySelectorAll<HTMLAnchorElement>('a[href^="#"]')];
+    const sections = links
+      .map((link) => {
+        const id = link.hash.slice(1);
+        return id ? document.getElementById(id) : null;
+      })
+      .filter((section): section is HTMLElement => Boolean(section));
+    if (!sections.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (!visible?.target.id) return;
+        const current = `#${visible.target.id}`;
+        for (const link of links) {
+          if (link.hash === current) link.setAttribute('aria-current', 'location');
+          else link.removeAttribute('aria-current');
+        }
+      },
+      { rootMargin: '-35% 0px -50% 0px', threshold: [0.1, 0.35, 0.6] },
+    );
+
+    for (const section of sections) observer.observe(section);
+  }
+
+  initAppToc();
+</script>

@@ -1,0 +1,177 @@
+---
+import ScreenshotFrame from './ScreenshotFrame.astro';
+import { withBase } from '../lib/withBase';
+
+export interface GalleryShot {
+  src: string;
+  alt: string;
+  caption?: string;
+  placeholder?: boolean;
+}
+
+export interface GalleryGroup {
+  heading: string;
+  id: string;
+  shots: GalleryShot[];
+}
+
+interface Props {
+  groups: GalleryGroup[];
+}
+
+const { groups } = Astro.props;
+
+const lightboxItems = groups.flatMap((group) =>
+  group.shots
+    .filter((shot) => !shot.placeholder)
+    .map((shot) => ({
+      src: withBase(shot.src),
+      alt: shot.alt,
+      caption: shot.caption ?? '',
+    })),
+);
+
+let nextLightboxIndex = 0;
+function lightboxIndexFor(placeholder?: boolean) {
+  if (placeholder) return undefined;
+  return nextLightboxIndex++;
+}
+---
+
+<div class="screenshot-gallery" data-screenshot-gallery>
+  {
+    groups.map((group) => (
+      <section class="shot-group" id={group.id} aria-labelledby={`${group.id}-heading`}>
+        <h2 id={`${group.id}-heading`}>{group.heading}</h2>
+        <div class="shots">
+          {group.shots.map((shot) => (
+            <ScreenshotFrame
+              src={withBase(shot.src)}
+              alt={shot.alt}
+              caption={shot.caption}
+              placeholder={shot.placeholder}
+              lightboxIndex={lightboxIndexFor(shot.placeholder)}
+            />
+          ))}
+        </div>
+      </section>
+    ))
+  }
+
+  {
+    lightboxItems.length > 0 && (
+      <dialog class="lightbox" aria-labelledby="lightbox-caption">
+        <div class="lightbox__bar">
+          <p class="lightbox__count" data-lightbox-count></p>
+          <button type="button" class="lightbox__close" data-lightbox-close>
+            Close
+          </button>
+        </div>
+        <img class="lightbox__image" data-lightbox-image alt="" />
+        <p class="lightbox__caption" id="lightbox-caption" data-lightbox-caption></p>
+        {
+          lightboxItems.length > 1 && (
+            <div class="lightbox__nav">
+              <button type="button" class="lightbox__prev" data-lightbox-prev>
+                Previous
+              </button>
+              <button type="button" class="lightbox__next" data-lightbox-next>
+                Next
+              </button>
+            </div>
+          )
+        }
+      </dialog>
+    )
+  }
+
+  <pre class="lightbox-data" hidden data-lightbox-json>
+    {JSON.stringify(lightboxItems)}
+  </pre>
+</div>
+
+<script>
+  type LightboxItem = { src: string; alt: string; caption: string };
+
+  function initLightbox() {
+    const gallery = document.querySelector('[data-screenshot-gallery]');
+    if (!(gallery instanceof HTMLElement)) return;
+
+    const dialogEl = gallery.querySelector('dialog.lightbox');
+    const jsonEl = gallery.querySelector('[data-lightbox-json]');
+    if (!(dialogEl instanceof HTMLDialogElement) || !jsonEl?.textContent) return;
+    const dialog: HTMLDialogElement = dialogEl;
+
+    const items = JSON.parse(jsonEl.textContent) as LightboxItem[];
+    if (!items.length) return;
+
+    const imageEl = dialog.querySelector('[data-lightbox-image]');
+    const captionEl = dialog.querySelector('[data-lightbox-caption]');
+    const countEl = dialog.querySelector('[data-lightbox-count]');
+    const closeBtn = dialog.querySelector('[data-lightbox-close]');
+    const prevBtn = dialog.querySelector('[data-lightbox-prev]');
+    const nextBtn = dialog.querySelector('[data-lightbox-next]');
+    if (!(imageEl instanceof HTMLImageElement) || !(captionEl instanceof HTMLElement) || !(closeBtn instanceof HTMLElement)) {
+      return;
+    }
+    const image = imageEl;
+    const caption = captionEl;
+
+    let index = 0;
+    let lastTrigger: HTMLElement | null = null;
+
+    function show(nextIndex: number) {
+      index = (nextIndex + items.length) % items.length;
+      const item = items[index];
+      image.src = item.src;
+      image.alt = item.alt;
+      caption.textContent = item.caption;
+      if (countEl) countEl.textContent = `${index + 1} / ${items.length}`;
+    }
+
+    function open(nextIndex: number, trigger?: HTMLElement) {
+      lastTrigger = trigger ?? null;
+      show(nextIndex);
+      dialog.showModal();
+    }
+
+    function closeLightbox() {
+      dialog.close();
+    }
+
+    gallery.addEventListener('click', (event) => {
+      const trigger = (event.target as HTMLElement).closest<HTMLElement>('[data-lightbox-index]');
+      if (!trigger) return;
+      const parsed = Number(trigger.dataset.lightboxIndex);
+      if (Number.isNaN(parsed)) return;
+      event.preventDefault();
+      open(parsed, trigger);
+    });
+
+    closeBtn.addEventListener('click', closeLightbox);
+    prevBtn?.addEventListener('click', () => show(index - 1));
+    nextBtn?.addEventListener('click', () => show(index + 1));
+
+    dialog.addEventListener('click', (event) => {
+      if (event.target === dialog) closeLightbox();
+    });
+
+    dialog.addEventListener('keydown', (event) => {
+      if (!dialog.open) return;
+      if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        show(index - 1);
+      }
+      if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        show(index + 1);
+      }
+    });
+
+    dialog.addEventListener('close', () => {
+      lastTrigger?.focus();
+    });
+  }
+
+  initLightbox();
+</script>

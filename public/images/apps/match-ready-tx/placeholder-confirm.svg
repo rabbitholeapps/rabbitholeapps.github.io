@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" fill="none">
+  <rect width="390" height="844" fill="#111"/>
+  <rect x="24" y="56" width="342" height="40" rx="8" fill="#1c1c1c"/>
+  <text x="195" y="82" text-anchor="middle" fill="#fbd823" font-family="Roboto, system-ui, sans-serif" font-size="15" font-weight="600">Confirm fixture</text>
+  <circle cx="195" cy="280" r="64" stroke="#fbd823" stroke-width="3"/>
+  <path d="M168 280 l18 18 36-40" stroke="#fbd823" stroke-width="4" fill="none"/>
+  <rect x="48" y="380" width="294" height="16" rx="4" fill="#2a2a2a"/>
+  <rect x="80" y="412" width="230" height="12" rx="4" fill="#222"/>
+  <rect x="24" y="460" width="342" height="56" rx="28" fill="#fbd823"/>
+  <text x="195" y="494" text-anchor="middle" fill="#111" font-family="Roboto, system-ui, sans-serif" font-size="16" font-weight="700">Confirm match</text>
+  <text x="195" y="780" text-anchor="middle" fill="#9c9c9c" font-family="Roboto, system-ui, sans-serif" font-size="14">Screenshot coming soon</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" fill="none">
+  <rect width="390" height="844" fill="#111"/>
+  <rect x="24" y="56" width="342" height="40" rx="8" fill="#1c1c1c"/>
+  <text x="195" y="82" text-anchor="middle" fill="#fbd823" font-family="Roboto, system-ui, sans-serif" font-size="15" font-weight="600">Coaching report</text>
+  <rect x="24" y="124" width="106" height="72" rx="12" fill="#1c1c1c" stroke="#2a2a2a"/>
+  <rect x="142" y="124" width="106" height="72" rx="12" fill="#1c1c1c" stroke="#2a2a2a"/>
+  <rect x="260" y="124" width="106" height="72" rx="12" fill="#1c1c1c" stroke="#2a2a2a"/>
+  <rect x="24" y="216" width="342" height="200" rx="12" fill="#1c1c1c" stroke="#2a2a2a"/>
+  <rect x="40" y="240" width="280" height="10" rx="4" fill="#2a2a2a"/>
+  <rect x="40" y="264" width="240" height="10" rx="4" fill="#222"/>
+  <rect x="40" y="288" width="200" height="10" rx="4" fill="#2a2a2a"/>
+  <text x="195" y="780" text-anchor="middle" fill="#9c9c9c" font-family="Roboto, system-ui, sans-serif" font-size="14">Screenshot coming soon</text>
+</svg>

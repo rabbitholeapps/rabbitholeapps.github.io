@@ -1,0 +1,27 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { withBase } from '../lib/withBase';
+
+interface Props {
+  app: CollectionEntry<'apps'>;
+}
+
+const { app } = Astro.props;
+const { name, tagline, status, labels, logo } = app.data;
+---
+
+<a class="app-card" href={withBase(`apps/${app.id}/`)}>
+  <div class="app-card__top">
+    <img class="app-card__logo" src={withBase(logo)} alt="" width="52" height="52" />
+    <div class="badge-row">
+      <span class:list={['badge', status === 'Live' && 'badge--live']}>{status}</span>
+      {labels.map((label) => (
+        <span class="badge badge--accent">{label}</span>
+      ))}
+    </div>
+  </div>
+  <div>
+    <h3>{name}</h3>
+    <p class="muted">{tagline}</p>
+  </div>
+</a>

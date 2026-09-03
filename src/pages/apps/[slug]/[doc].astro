@@ -1,0 +1,43 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import AppDocNav from '../../../components/AppDocNav.astro';
+
+export async function getStaticPaths() {
+  const docs = await getCollection('appDocs');
+  const apps = await getCollection('apps');
+  const byId = Object.fromEntries(apps.map((app) => [app.id, app]));
+
+  return docs.flatMap((entry) => {
+    const app = byId[entry.data.app];
+    if (!app) return [];
+    return [
+      {
+        params: { slug: entry.data.app, doc: entry.data.page },
+        props: { entry, app },
+      },
+    ];
+  });
+}
+
+const { entry, app } = Astro.props;
+const { Content } = await render(entry);
+const siblings = (await getCollection('appDocs'))
+  .filter((doc) => doc.data.app === entry.data.app)
+  .sort((a, b) => a.data.order - b.data.order)
+  .map((doc) => ({ page: doc.data.page, navLabel: doc.data.navLabel }));
+---
+
+<BaseLayout title={`${entry.data.title} · ${app.data.name}`} description={entry.data.description}>
+  <article class="wrap doc-page">
+    <AppDocNav
+      appSlug={app.id}
+      appName={app.data.name}
+      docs={siblings}
+      current={entry.data.page}
+    />
+    <div class="app-body">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>

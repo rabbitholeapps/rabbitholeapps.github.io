@@ -1,0 +1,13 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { withBase } from '../lib/withBase';
+---
+
+<BaseLayout title="Page not found" description="That page is not on Rabbit Hole Apps.">
+  <div class="wrap not-found">
+    <p class="eyebrow">404</p>
+    <h1>Nothing down this hole.</h1>
+    <p class="lede" style="margin-inline: auto">The page you want is not here. Try the apps, or head home.</p>
+    <a class="cta" href={withBase()}>Back home</a>
+  </div>
+</BaseLayout>

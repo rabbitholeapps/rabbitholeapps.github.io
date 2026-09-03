@@ -1,0 +1,19 @@
+---
+import { site } from '../lib/site';
+import { withBase } from '../lib/withBase';
+import { externalAttrs } from '../lib/external';
+---
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <p>{site.tagline} {site.origin}</p>
+    <div class="site-footer__links">
+      <a href={withBase()}>Home</a>
+      <a href={withBase('apps/')}>Apps</a>
+      <a href={withBase('about/')}>About</a>
+      <a href={withBase('legal/')}>Legal</a>
+      <a href={`mailto:${site.email}`}>{site.email}</a>
+      <a href={site.github} {...externalAttrs(site.github)}>GitHub</a>
+    </div>
+  </div>
+</footer>

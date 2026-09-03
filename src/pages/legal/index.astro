@@ -1,0 +1,97 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { withBase } from '../../lib/withBase';
+
+const companyDocs = (await getCollection('legal')).sort(
+  (a, b) => a.data.order - b.data.order,
+);
+
+const apps = (await getCollection('apps')).sort((a, b) => a.data.order - b.data.order);
+const allAppDocs = await getCollection('appDocs');
+
+const appLegal = apps.map((app) => ({
+  id: app.id,
+  name: app.data.name,
+  docs: allAppDocs
+    .filter((doc) => doc.data.app === app.id)
+    .sort((a, b) => a.data.order - b.data.order)
+    .map((doc) => ({
+      page: doc.data.page,
+      navLabel: doc.data.navLabel,
+      href: withBase(`apps/${app.id}/${doc.data.page}/`),
+    })),
+}));
+---
+
+<BaseLayout
+  title="Legal"
+  description="End User License Agreement, privacy policies, and support documents for Rabbit Hole Apps products."
+>
+  <div class="wrap legal-index">
+    <p class="eyebrow">Legal</p>
+    <h1>Policies and documents</h1>
+    <p class="lede">
+      Rabbit Hole Apps publishes one place for licenses, privacy, and support links across
+      our products. Store listings and in-app links can point here.
+    </p>
+
+    <section class="section" aria-labelledby="company-legal-heading">
+      <div class="section__head">
+        <h2 id="company-legal-heading">Company-wide</h2>
+        <p class="muted">Applies to all Rabbit Hole Apps mobile applications unless an app-specific document says otherwise.</p>
+      </div>
+      <ul class="legal-list">
+        {
+          companyDocs.map((doc) => (
+            <li>
+              <a href={withBase(`legal/${doc.id}/`)}>
+                <strong>{doc.data.navLabel}</strong>
+                <span class="muted">{doc.data.description}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <section class="section" aria-labelledby="app-legal-heading">
+      <div class="section__head">
+        <h2 id="app-legal-heading">By app</h2>
+        <p class="muted">Privacy, support, and account-deletion pages for each product.</p>
+      </div>
+      <div class="legal-app-grid">
+        {
+          appLegal.map((app) => (
+            <article class="legal-app-card">
+              <h3>
+                <a href={withBase(`apps/${app.id}/`)}>{app.name}</a>
+              </h3>
+              {
+                app.docs.length > 0 ? (
+                  <ul class="legal-list legal-list--compact">
+                    {app.docs.map((doc) => (
+                      <li>
+                        <a href={doc.href}>{doc.navLabel}</a>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p class="muted legal-app-card__empty">No app-specific legal pages yet.</p>
+                )
+              }
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="section legal-contact" aria-labelledby="legal-contact-heading">
+      <h2 id="legal-contact-heading">Questions</h2>
+      <p class="muted">
+        For licensing, privacy, or compliance questions, email
+        <a href="mailto:JustinXHale@gmail.com">JustinXHale@gmail.com</a>.
+      </p>
+    </section>
+  </div>
+</BaseLayout>

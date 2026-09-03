@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" fill="none">
+  <rect width="390" height="844" fill="#111"/>
+  <rect x="24" y="56" width="342" height="40" rx="8" fill="#1c1c1c"/>
+  <text x="195" y="82" text-anchor="middle" fill="#fbd823" font-family="Roboto, system-ui, sans-serif" font-size="15" font-weight="600">Sevens Manager</text>
+  <rect x="24" y="120" width="162" height="88" rx="12" fill="#1c1c1c" stroke="#2a2a2a"/>
+  <rect x="204" y="120" width="162" height="88" rx="12" fill="#1c1c1c" stroke="#2a2a2a"/>
+  <rect x="24" y="224" width="162" height="88" rx="12" fill="#1c1c1c" stroke="#2a2a2a"/>
+  <rect x="204" y="224" width="162" height="88" rx="12" fill="#1c1c1c" stroke="#2a2a2a"/>
+  <rect x="24" y="328" width="162" height="88" rx="12" fill="#1c1c1c" stroke="#2a2a2a"/>
+  <rect x="204" y="328" width="162" height="88" rx="12" fill="#1c1c1c" stroke="#2a2a2a"/>
+  <text x="105" y="172" text-anchor="middle" fill="#f5f5f5" font-family="Roboto, system-ui, sans-serif" font-size="14">Try</text>
+  <text x="285" y="172" text-anchor="middle" fill="#f5f5f5" font-family="Roboto, system-ui, sans-serif" font-size="14">Tackle</text>
+  <text x="105" y="276" text-anchor="middle" fill="#f5f5f5" font-family="Roboto, system-ui, sans-serif" font-size="14">Pass</text>
+  <text x="285" y="276" text-anchor="middle" fill="#f5f5f5" font-family="Roboto, system-ui, sans-serif" font-size="14">Ruck</text>
+  <text x="195" y="780" text-anchor="middle" fill="#9c9c9c" font-family="Roboto, system-ui, sans-serif" font-size="14">Screenshot coming soon</text>
+</svg>

@@ -1,0 +1,48 @@
+---
+import { getCollection } from 'astro:content';
+import { site } from '../lib/site';
+import { withBase } from '../lib/withBase';
+import BrandMark from './BrandMark.astro';
+
+const apps = (await getCollection('apps')).sort((a, b) => a.data.order - b.data.order);
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const onAbout = path.endsWith('/about');
+const onAppsIndex = path.endsWith('/apps');
+const currentApp = apps.find(
+  (app) => path === `/apps/${app.id}` || path.startsWith(`/apps/${app.id}/`),
+);
+---
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href={withBase()}>
+      <BrandMark class="brand__mark" />
+      <span class="brand__name">{site.name}</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <details class="nav-apps">
+        <summary aria-current={onAppsIndex || currentApp ? 'page' : undefined}>Apps</summary>
+        <div class="nav-apps__panel">
+          <a href={withBase('apps/')} aria-current={onAppsIndex ? 'page' : undefined}>All apps</a>
+          {
+            apps.map((app) => (
+              <a
+                href={withBase(`apps/${app.id}/`)}
+                aria-current={currentApp?.id === app.id ? 'page' : undefined}
+              >
+                {app.data.name}
+              </a>
+            ))
+          }
+        </div>
+      </details>
+      <a href={withBase('about/')} aria-current={onAbout ? 'page' : undefined}>About</a>
+      <a
+        href={withBase('legal/')}
+        aria-current={path.startsWith('/legal') ? 'page' : undefined}
+      >
+        Legal
+      </a>
+    </nav>
+  </div>
+</header>

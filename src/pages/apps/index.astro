@@ -1,0 +1,22 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AppCard from '../../components/AppCard.astro';
+
+const apps = (await getCollection('apps')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout title="Apps" description="MatchReadyTX, TO3, ReflectED, Sevens Manager, RefLog, and Referee IQ — the Rabbit Hole Apps suite.">
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Apps</p>
+      <h1>The suite</h1>
+      <p class="lede">Each product solves one problem. Same standard: simple, and a UI you would actually use.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap app-grid">
+      {apps.map((app) => <AppCard app={app} />)}
+    </div>
+  </section>
+</BaseLayout>

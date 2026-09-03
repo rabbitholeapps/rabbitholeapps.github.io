@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PersonCard from '../components/PersonCard.astro';
+import { site } from '../lib/site';
+---
+
+<BaseLayout title="About" description={`About ${site.name} — who we are, why we build, and how we work.`}>
+  <div class="wrap">
+    <section class="hero">
+      <p class="eyebrow">About</p>
+      <h1>Simple tools. Fantastic UIs.</h1>
+      <p class="lede">
+        Rabbit Hole Apps is Justin Hale and Marquise Goodwin. We build products we would use on a
+        Saturday — on a pitch, a sideline, or in a classroom — then we make the interface good
+        enough that other people will too.
+      </p>
+    </section>
+
+    <section class="section">
+      <div class="mission">
+        <h2>Mission</h2>
+        <p class="lede" style="margin-top: 1rem">
+          Field-tested tools. Honest copy. Interfaces you can use under pressure. If it takes a
+          training manual to confirm a match or talk to your crew, we are not done.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section__head">
+        <h2>Why the name</h2>
+        <p class="muted">{site.origin} The apps are what we found down there.</p>
+      </div>
+      <div class="prose-pair">
+        <div class="prose-block">
+          <h2>Why the products work</h2>
+          <ul class="highlights">
+            <li>We live the jobs: assigning, officiating, coaching, teaching.</li>
+            <li>We ship the smallest thing that actually helps on game day or Monday morning.</li>
+            <li>We obsess over the UI so the tool disappears and the work stays.</li>
+          </ul>
+        </div>
+        <div class="prose-block">
+          <h2>How we work</h2>
+          <p>
+            Every app started as a problem we could not ignore. Match confirmation that lived in
+            email. Crews who could not afford radios. Coaching without film. Teaching without timely
+            feedback. We follow that problem until the product is something we would hand a
+            colleague without an apology.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="people-heading">
+      <div class="section__head">
+        <h2 id="people-heading">Who we are</h2>
+        <p class="muted">
+          Photos coming soon. The bios are the point: you should know who built the thing you are
+          about to trust.
+        </p>
+      </div>
+      <div class="people">
+        <PersonCard name="Justin X. Hale" role="Co-founder · product designer" photo="images/team/justin.svg">
+          <p>
+            Justin designs and builds the products. By day he is a senior product designer. By
+            weekend he is a rugby referee — MLR, RugbyTown 7s, Coral Coast 7s, national
+            championships. He has been in the game since 2008 as a player and since 2017 as an
+            official.
+          </p>
+          <p>
+            That mix is the method. He sits with assigners and their spreadsheets, with crews who
+            cannot hear each other, with coaches who need numbers before the film arrives. Then he
+            ships an interface that holds up in the sun, on a phone, with no time to think. If the
+            UI is clumsy, the product is not ready — no matter how clever the backend is.
+          </p>
+        </PersonCard>
+        <PersonCard
+          name="Marquise Goodwin"
+          role="Co-founder · match official"
+          photo="images/team/marquise.svg"
+        >
+          <p>
+            Marquise is an MLR referee, vice president of the Southern California Rugby Referee
+            Society, and a high school special education teacher. He knows what it costs when
+            communication fails — on a pitch with three officials, and in a classroom where
+            feedback comes too late to help.
+          </p>
+          <p>
+            He is the field voice of the company. If a tool would not survive a real match, a real
+            crew, or a real Monday with students, it does not ship. TO3 exists because he and
+            Justin were tired of expensive radios and silence. ReflectED exists because teachers
+            and coaches deserve coaching that is frequent, fair, and actually useful.
+          </p>
+        </PersonCard>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

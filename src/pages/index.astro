@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AppCard from '../components/AppCard.astro';
+import { site } from '../lib/site';
+
+const apps = (await getCollection('apps')).sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">{site.name}</p>
+      <h1>We go down rabbit holes. That’s the point.</h1>
+      <p class="lede">
+        Every time we try to solve a problem, we follow the ideas wherever they lead. This is the
+        home for those products — simple tools with fantastic UIs.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="apps" aria-labelledby="apps-heading">
+    <div class="wrap">
+      <div class="section__head">
+        <h2 id="apps-heading">The apps</h2>
+        <p class="muted">Six products. One standard: keep it simple, and make the interface excellent.</p>
+      </div>
+      <div class="app-grid">
+        {apps.map((app) => <AppCard app={app} />)}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

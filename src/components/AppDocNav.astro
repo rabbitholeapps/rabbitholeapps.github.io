@@ -1,0 +1,41 @@
+---
+import { withBase } from '../lib/withBase';
+
+interface DocLink {
+  page: string;
+  navLabel: string;
+}
+
+interface Props {
+  appSlug: string;
+  appName: string;
+  docs: DocLink[];
+  current?: string;
+}
+
+const { appSlug, appName, docs, current } = Astro.props;
+---
+
+<nav class:list={['doc-nav', !current && 'doc-nav--footer']} aria-label={`${appName} documents`}>
+  {
+    current && (
+      <a class="back" href={withBase(`apps/${appSlug}/`)}>
+        ← {appName}
+      </a>
+    )
+  }
+  {
+    docs.length > 0 && (
+      <div class="doc-nav__links">
+        {docs.map((doc) => (
+          <a
+            href={withBase(`apps/${appSlug}/${doc.page}/`)}
+            aria-current={current === doc.page ? 'page' : undefined}
+          >
+            {doc.navLabel}
+          </a>
+        ))}
+      </div>
+    )
+  }
+</nav>

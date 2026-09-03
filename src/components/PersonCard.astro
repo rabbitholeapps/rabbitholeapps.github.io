@@ -1,0 +1,22 @@
+---
+import { withBase } from '../lib/withBase';
+
+interface Props {
+  name: string;
+  role: string;
+  photo: string;
+}
+
+const { name, role, photo } = Astro.props;
+---
+
+<article class="person">
+  <img class="person__photo" src={withBase(photo)} alt="" width="160" height="160" />
+  <div class="person__body">
+    <h2>{name}</h2>
+    <p class="person__role">{role}</p>
+    <div class="person__copy">
+      <slot />
+    </div>
+  </div>
+</article>
