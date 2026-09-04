@@ -62,6 +62,7 @@ The route `/apps/your-slug/` is generated from the filename.
 | App index | `/apps/` |
 | MatchReadyTX | `/apps/match-ready-tx/` |
 | TO3 | `/apps/to3/` |
+| TO3 privacy / EULA / terms / support / delete | `/apps/to3/privacy/` · `/eula/` · `/terms/` · `/support/` · `/delete-account/` |
 | ReflectED | `/apps/reflected/` |
 | Sevens Manager | `/apps/sevens-manager/` |
 | RefLog | `/apps/reflog/` |
