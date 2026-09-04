@@ -11,7 +11,7 @@ order: 2
 
 Referee IQ is still in development and not in the App Store or on Google Play yet.
 
-Questions, feedback, or a bug: [JustinXHale@gmail.com](mailto:JustinXHale@gmail.com) with the subject **Referee IQ Support**.
+Questions, feedback, or a bug: [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com) with the subject **Referee IQ Support**.
 
 If you already have a test build, include:
 

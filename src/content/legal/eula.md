@@ -128,7 +128,7 @@ Your continued use of an App after changes become effective constitutes acceptan
 
 Questions about this Agreement:
 
-- **Email:** [JustinXHale@gmail.com](mailto:JustinXHale@gmail.com)
+- **Email:** [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com)
 - **Legal hub:** [rabbitholeapps.com/legal](/legal/) (or the current URL where this page is published)
 
 ---

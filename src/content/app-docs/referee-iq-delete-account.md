@@ -15,7 +15,7 @@ To permanently delete your Referee IQ account and associated data, follow the st
 
 Email us from the address linked to your Referee IQ account:
 
-- **To:** [JustinXHale@gmail.com](mailto:JustinXHale@gmail.com?subject=Referee%20IQ%20Account%20Deletion%20Request&body=Please%20delete%20my%20Referee%20IQ%20account.%0A%0ARegistered%20email%3A%20%3Cyour%20email%3E%0A%0AI%20understand%20this%20action%20is%20permanent.%0A)
+- **To:** [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com?subject=Referee%20IQ%20Account%20Deletion%20Request&body=Please%20delete%20my%20Referee%20IQ%20account.%0A%0ARegistered%20email%3A%20%3Cyour%20email%3E%0A%0AI%20understand%20this%20action%20is%20permanent.%0A)
 - **Subject:** `Referee IQ Account Deletion Request`
 - **Include:** the **registered email** for the account, and a statement that you want it deleted
 
@@ -38,4 +38,4 @@ An in-app delete option is planned. Until then, email deletion is fully supporte
 
 ## Need help?
 
-Reply to your deletion email, or write [JustinXHale@gmail.com](mailto:JustinXHale@gmail.com).
+Reply to your deletion email, or write [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com).

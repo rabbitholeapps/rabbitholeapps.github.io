@@ -11,7 +11,7 @@ highlights:
   - Built for educators now, coaches next — same product, pluggable standards.
 cta:
   label: Email us about ReflectED
-  href: mailto:JustinXHale@gmail.com?subject=ReflectED
+  href: mailto:rabbitholeapps26@gmail.com?subject=ReflectED
 logo: images/apps/reflected/logo.svg
 screenshots:
   - src: images/apps/reflected/placeholder-plan.svg

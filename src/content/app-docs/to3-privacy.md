@@ -20,7 +20,7 @@ By using Tō3, you agree to this policy. If you do not agree, do not use the App
 ## 1. Who we are
 
 **Data controller:** Rabbit Hole Apps  
-**Privacy contact:** [JustinXHale@gmail.com](mailto:JustinXHale@gmail.com)  
+**Privacy contact:** [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com)  
 **Legal hub:** [rabbitholeapps.com/legal](/legal/)
 
 ---
@@ -168,7 +168,7 @@ We may update this policy from time to time. We will post the new “Last update
 
 Questions about this Privacy Policy or your data:
 
-- **Email:** [JustinXHale@gmail.com](mailto:JustinXHale@gmail.com)
+- **Email:** [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com)
 - **Legal hub:** [rabbitholeapps.com/legal](/legal/)
 - **Tō3 app page:** [rabbitholeapps.com/apps/to3/](/apps/to3/)
 

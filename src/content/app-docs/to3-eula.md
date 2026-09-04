@@ -168,7 +168,7 @@ Your continued use of Tō3 after changes become effective constitutes acceptance
 
 Questions about this Agreement:
 
-- **Email:** [JustinXHale@gmail.com](mailto:JustinXHale@gmail.com)
+- **Email:** [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com)
 - **Legal hub:** [rabbitholeapps.com/legal](/legal/)
 
 ---

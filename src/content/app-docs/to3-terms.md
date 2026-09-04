@@ -22,7 +22,7 @@ By accessing or using the Service, you agree to these Terms. If you do not agree
 ## 1. Who we are
 
 **Rabbit Hole Apps** publishes Tō3.  
-**Contact:** [JustinXHale@gmail.com](mailto:JustinXHale@gmail.com)  
+**Contact:** [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com)  
 **Legal hub:** [rabbitholeapps.com/legal](/legal/)
 
 ---
@@ -141,7 +141,7 @@ Tō3 and the Service — including software, design, text, graphics, logos, and 
 
 We respect intellectual property rights. If you believe content on the Service infringes your copyright, send a notice to our designated agent:
 
-**Copyright agent:** [JustinXHale@gmail.com](mailto:JustinXHale@gmail.com)  
+**Copyright agent:** [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com)  
 **Subject line:** Tō3 DMCA Notice
 
 Include the information required by the U.S. Digital Millennium Copyright Act (17 U.S.C. § 512(c)(3)), including:
@@ -225,7 +225,7 @@ Continued use after changes become effective means you accept the updated Terms.
 
 Questions about these Terms:
 
-- **Email:** [JustinXHale@gmail.com](mailto:JustinXHale@gmail.com)
+- **Email:** [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com)
 - **Legal hub:** [rabbitholeapps.com/legal](/legal/)
 - **Tō3 app page:** [rabbitholeapps.com/apps/to3/](/apps/to3/)
 

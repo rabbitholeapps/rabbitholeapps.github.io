@@ -48,9 +48,9 @@ const groups = screenshotGroups?.length
 const toc = [
   { id: 'problem', label: 'Problem' },
   { id: 'solution', label: 'Solution' },
+  { id: 'get-the-app', label: 'Get the app' },
   ...markdownH2s(app.body ?? ''),
   ...(setup ? [{ id: 'get-set-up', label: 'Get set up' }] : []),
-  { id: 'get-the-app', label: 'Get the app' },
   ...groups.map((group) => ({ id: group.id, label: group.heading })),
   ...(docs.length ? [{ id: 'privacy-and-support', label: 'Privacy and support' }] : []),
 ];
@@ -94,6 +94,49 @@ function hrefFor(href: string) {
       </section>
     </div>
 
+    <section class="app-get" id="get-the-app">
+      <h2>Get the app</h2>
+      <div class="cta-row">
+        {
+          store.length > 0 && (
+            <div class="store-badges">
+              {store.map((item) => {
+                const badge = storeBadge(item.kind);
+                return (
+                  <a
+                    class="store-badge"
+                    href={item.href}
+                    aria-label={badge.alt}
+                    {...externalAttrs(item.href)}
+                  >
+                    <img src={withBase(badge.src)} alt="" height="52" />
+                  </a>
+                );
+              })}
+            </div>
+          )
+        }
+        {
+          rest.map((link, index) => (
+            <a
+              class:list={['cta', (store.length > 0 || index > 0) && 'cta--ghost']}
+              href={hrefFor(link.href)}
+              {...externalAttrs(link.href)}
+            >
+              {link.label}
+            </a>
+          ))
+        }
+        {
+          github && (
+            <a class="cta cta--ghost" href={hrefFor(github)} {...externalAttrs(github)}>
+              View source on GitHub
+            </a>
+          )
+        }
+      </div>
+    </section>
+
     <ul class="highlights">
       {highlights.map((item) => <li>{item}</li>)}
     </ul>
@@ -114,46 +157,6 @@ function hrefFor(href: string) {
         </aside>
       )
     }
-
-    <div class="cta-row" id="get-the-app">
-      {
-        store.length > 0 && (
-          <div class="store-badges">
-            {store.map((item) => {
-              const badge = storeBadge(item.kind);
-              return (
-                <a
-                  class="store-badge"
-                  href={item.href}
-                  aria-label={badge.alt}
-                  {...externalAttrs(item.href)}
-                >
-                  <img src={withBase(badge.src)} alt="" height="52" />
-                </a>
-              );
-            })}
-          </div>
-        )
-      }
-      {
-        rest.map((link, index) => (
-          <a
-            class:list={['cta', (store.length > 0 || index > 0) && 'cta--ghost']}
-            href={hrefFor(link.href)}
-            {...externalAttrs(link.href)}
-          >
-            {link.label}
-          </a>
-        ))
-      }
-      {
-        github && (
-          <a class="cta cta--ghost" href={hrefFor(github)} {...externalAttrs(github)}>
-            View source on GitHub
-          </a>
-        )
-      }
-    </div>
 
     <ScreenshotGallery groups={groups} />
 

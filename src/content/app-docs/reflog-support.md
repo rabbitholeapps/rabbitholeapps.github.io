@@ -9,7 +9,7 @@ order: 2
 
 # Support
 
-Questions or feedback? Email [JustinXHale@gmail.com](mailto:JustinXHale@gmail.com) with the subject **RefLog Support**.
+Questions or feedback? Email [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com) with the subject **RefLog Support**.
 
 We read every message. Typical reply time is 24–48 hours.
 
@@ -43,8 +43,8 @@ It is rugby-specific today. If you want another sport, tell us.
 
 ## Feature requests
 
-Send ideas to [JustinXHale@gmail.com](mailto:JustinXHale@gmail.com) with the subject **RefLog Feature Request**.
+Send ideas to [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com) with the subject **RefLog Feature Request**.
 
 ## Report a bug
 
-Email [JustinXHale@gmail.com](mailto:JustinXHale@gmail.com) with the subject **RefLog Bug Report**. Include steps to reproduce, what you expected, what happened, and screenshots if you have them.
+Email [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com) with the subject **RefLog Bug Report**. Include steps to reproduce, what you expected, what happened, and screenshots if you have them.

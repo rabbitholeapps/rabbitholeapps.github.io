@@ -11,7 +11,7 @@ highlights:
   - In development — not in the App Store or on Google Play yet.
 cta:
   label: Email us about Referee IQ
-  href: mailto:JustinXHale@gmail.com?subject=Referee%20IQ
+  href: mailto:rabbitholeapps26@gmail.com?subject=Referee%20IQ
 logo: images/apps/referee-iq/logo.png
 screenshots:
   - src: images/apps/referee-iq/welcome.png

@@ -16,7 +16,7 @@ cta:
   href: https://matchreadytx.web.app
 extraLinks:
   - label: Email us to get set up
-    href: mailto:JustinXHale@gmail.com
+    href: mailto:rabbitholeapps26@gmail.com
 setup: MatchReadyTX is free and open source. Contact us and we will help get your referee organization running — we connect your Google Sheet, walk assigners through the queues, and get teams confirming fixtures. You keep the spreadsheet. You get a UI people will actually use.
 github: https://github.com/JustinXHale/matchReadyTX
 logo: images/apps/match-ready-tx/logo.png

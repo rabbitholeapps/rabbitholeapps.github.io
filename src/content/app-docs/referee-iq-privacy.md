@@ -47,7 +47,7 @@ Information is stored in Google Firebase and Google Cloud. We keep it until you 
 
 ## 5. Your choices and account deletion
 
-Email [JustinXHale@gmail.com](mailto:JustinXHale@gmail.com) to delete your account and associated data.
+Email [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com) to delete your account and associated data.
 
 We verify the request and delete within **30 days**. An in-app delete option is planned.
 
@@ -73,4 +73,4 @@ We may update this policy. Changes will be posted here with a new “Last update
 
 ## 9. Contact
 
-[JustinXHale@gmail.com](mailto:JustinXHale@gmail.com)
+[rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com)

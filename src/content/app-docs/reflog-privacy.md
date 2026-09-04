@@ -87,4 +87,4 @@ We may update this policy as features land, especially cloud features. Changes w
 
 ## 10. Contact
 
-Questions about this policy: [JustinXHale@gmail.com](mailto:JustinXHale@gmail.com)
+Questions about this policy: [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com)
