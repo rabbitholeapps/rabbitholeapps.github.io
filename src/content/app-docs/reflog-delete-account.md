@@ -4,7 +4,7 @@ page: delete-account
 title: Delete your data
 description: How to delete RefLog match data from your device.
 navLabel: Delete data
-order: 3
+order: 4
 ---
 
 # Delete your RefLog data
@@ -16,9 +16,8 @@ RefLog is **local-first** and does not require an account. Match data lives on y
 **Option 1: Delete individual matches**
 
 1. Open the match list in Ref Mode or Coach Mode
-2. Swipe left on a match, or long-press to select
-3. Tap delete
-4. Confirm
+2. Swipe left or right on a match card
+3. Confirm delete
 
 **Option 2: Uninstall the app**
 

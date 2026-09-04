@@ -9,82 +9,112 @@ order: 1
 
 # Privacy Policy for RefLog
 
-_Last updated: 24 August 2026_
+_Last updated: 4 September 2026_
 
-RefLog (“we,” “our,” or “us”) respects your privacy. This policy explains how we collect, use, and protect information when you use the RefLog mobile app.
+RefLog is published by **Rabbit Hole Apps** (“we,” “our,” or “us”). This policy explains how we handle information when you use the RefLog mobile app.
 
 ## 1. Local-first
 
-RefLog is built around privacy. **All match data stays on your device.** We do not collect, transmit, or store your matches, notes, or other content on our servers.
+RefLog is built around privacy. **Match data stays on your device by default.** We do not operate servers that store your matches, notes, or event logs.
 
 ## 2. Information we collect
 
-RefLog collects **very little**:
+### 2.1 User content (stored on your device)
 
-- **Device information** (optional, for diagnostics): device model, OS version, app version
-- **Crash and performance data** (optional): crash logs and diagnostics for stability
+When you use RefLog, you may enter or create:
 
-We **do not** currently collect:
+- Match details (teams, dates, locations, officials)
+- Event logs, notes, and coach observations
+- Optional voice recordings in **Coach Mode** (microphone access only when you start a recording)
+- Exported PDF and Excel files (saved or shared by you)
 
-- Account information (RefLog does not require a login)
-- Personal identifying information
-- Usage analytics
-- Match data or anything you create in the app
+This content is stored locally on your device unless you export or share it yourself.
 
-## 3. How we use it
+### 2.2 Diagnostic and configuration data
 
-Optional diagnostic information is used only to:
+RefLog may use **Firebase** (Google) services for:
 
-- Diagnose crashes and technical issues
-- Improve stability
-- Respond when you contact us for support
+- **Remote Config** — feature flags and in-app configuration (for example, tutorial settings)
+- **Crash and performance diagnostics** — optional crash logs to improve stability (SDK may be present depending on your app version)
 
-We **do not sell or rent** information to third parties.
+We **do not** currently run advertising, remarketing, or user analytics tied to your identity.
 
-## 4. Storage
+We **do not** collect:
 
-**Match data is stored locally** in encrypted storage on your device (Hive). It never leaves the device unless you:
+- Account information (RefLog does not require a login today)
+- Email, name, or phone number through the app
+- Precise location (GPS)
+- Contacts, photos, or camera roll
 
-- Export a PDF or Excel file and share it yourself
-- Contact support and choose to send screenshots or details
+### 2.3 Support email
 
-We cannot see your local match data.
+If you email us at [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com), we receive whatever you choose to send (device type, screenshots, descriptions). We use that only to respond to your request.
 
-## 5. Future cloud features
+## 3. How we use information
 
-We plan optional cloud features later, including backup, sync, and sharing matches with coaches.
+We use information to:
 
-When those ship:
+- Operate RefLog on your device
+- Deliver remote configuration and crash diagnostics
+- Respond to support requests you send us
+- Improve stability and features
+
+We **do not sell** your personal information.
+
+## 4. Storage and sharing
+
+**Match data is stored locally** on your device (for example, via encrypted local storage). It does not leave your device unless you:
+
+- Export a PDF or Excel file and share it
+- Email us for support and attach details voluntarily
+
+We cannot access your local match data remotely.
+
+## 5. Third-party services
+
+RefLog uses:
+
+- **Flutter** — app framework (Google)
+- **Firebase** — remote configuration and diagnostics ([Google Privacy Policy](https://policies.google.com/privacy))
+- **Apple App Store / Google Play** — app distribution
+
+If you open a video link (YouTube, Vimeo, etc.) from match info, that site’s privacy policy applies.
+
+## 6. Your rights
+
+Depending on where you live, you may have rights to access, correct, delete, or port personal information we hold about you (for example, in support correspondence).
+
+Because match data is stored on your device:
+
+- **Delete matches** in the app or **uninstall RefLog** to remove local data
+- See [Delete your data](/apps/reflog/delete-account/) for steps
+
+**California residents (CCPA/CPRA):** We do not sell personal information. You may contact us to request information about data we hold from support emails.
+
+**EEA/UK residents (GDPR):** Our legal basis for processing is typically legitimate interest (operating and improving the app) and consent where required (for example, microphone access). You may contact us or your local data protection authority with concerns.
+
+## 7. Children’s privacy
+
+RefLog is not directed to children under 13. We do not knowingly collect personal information from children under 13. Contact us if you believe a child has provided information to us.
+
+## 8. Security
+
+We use reasonable measures to protect information we process. No method of storage or transmission is 100% secure. You are responsible for securing your device and any files you export.
+
+## 9. Future cloud features
+
+We may offer optional cloud backup, sync, or collaboration later. If we do:
 
 - They will be **optional** — local-only use will still work
-- We will update this policy with how cloud data is handled
-- Authentication and cloud storage will use a secure provider (likely Firebase or Supabase)
+- We will update this policy before those features launch
+- We will describe what is stored, where, and how to delete it
 
-## 6. Third-party services
+## 10. Changes
 
-RefLog currently uses:
+We may update this policy as features change. We will post updates here with a new “Last updated” date.
 
-- **Flutter** — cross-platform app framework (Google)
-- **Firebase Core** — crash-reporting infrastructure (ready, not actively sending match data)
+## 11. Contact
 
-Those services may collect minimal diagnostics under [Google’s Privacy Policy](https://policies.google.com/privacy).
+Questions about this policy: [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com) — subject **RefLog Privacy**.
 
-## 7. Security
-
-- Match data is encrypted on the device
-- Nothing is sent to the cloud unless you export it
-- The app is distributed through the App Store and Google Play
-
-## 8. Your control
-
-- Uninstall the app to remove all local data
-- Export PDFs or Excel files and decide who sees them
-- No account, so there is no account to manage
-
-## 9. Changes
-
-We may update this policy as features land, especially cloud features. Changes will be posted here with a new “Last updated” date.
-
-## 10. Contact
-
-Questions about this policy: [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com)
+Related: [Terms of Use](/apps/reflog/terms/) · [Support](/apps/reflog/support/)

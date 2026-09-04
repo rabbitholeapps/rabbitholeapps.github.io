@@ -4,7 +4,7 @@ page: support
 title: Support
 description: Help, tutorials, and how to reach us about RefLog.
 navLabel: Support
-order: 2
+order: 3
 ---
 
 # Support
@@ -48,3 +48,9 @@ Send ideas to [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com) wi
 ## Report a bug
 
 Email [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com) with the subject **RefLog Bug Report**. Include steps to reproduce, what you expected, what happened, and screenshots if you have them.
+
+## Legal
+
+- [Terms of Use](/apps/reflog/terms/)
+- [Privacy Policy](/apps/reflog/privacy/)
+- [Delete your data](/apps/reflog/delete-account/)
