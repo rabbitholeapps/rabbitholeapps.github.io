@@ -218,8 +218,10 @@ h3 {
 
 .brand__mark {
   flex: none;
-  width: 1.85rem;
-  height: 1.85rem;
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
 }
 
 .brand__name {

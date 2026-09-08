@@ -1,4 +1,6 @@
 ---
+import { withBase } from '../lib/withBase';
+
 interface Props {
   class?: string;
 }
@@ -6,16 +8,12 @@ interface Props {
 const { class: className } = Astro.props;
 ---
 
-<svg
+<img
   class={className}
-  viewBox="0 0 48 48"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
+  src={withBase('images/logos/rabbitHoleAppsLogos_RabbitHoleApps-WhiteLogo.png')}
+  alt=""
+  width="48"
+  height="48"
+  decoding="async"
   aria-hidden="true"
-  focusable="false"
->
-  <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="1.5" />
-  <circle cx="24" cy="24" r="14" stroke="currentColor" stroke-width="1.5" />
-  <circle cx="24" cy="24" r="7" stroke="currentColor" stroke-width="1.5" />
-  <circle cx="24" cy="24" r="2.25" fill="#fbd823" />
-</svg>
+/>
