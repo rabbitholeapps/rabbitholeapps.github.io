@@ -95,6 +95,6 @@ We may update this policy. Changes will be posted here with a new “Last update
 
 ## 10. Contact
 
-[justinxhale@gmail.com](mailto:justinxhale@gmail.com)
+[rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com)
 
 Related: [Terms of Use](../terms/) · [Support](../support/) · [Delete account](../delete-account/)

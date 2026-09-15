@@ -22,7 +22,7 @@ extraLinks:
   - label: Support
     href: /apps/match-calendar/support/
   - label: Email us about Match Calendar
-    href: mailto:justinxhale@gmail.com?subject=Match%20Calendar
+    href: mailto:rabbitholeapps26@gmail.com?subject=Match%20Calendar
 logo: images/apps/match-calendar/logo.svg
 screenshots:
   - src: images/apps/match-calendar/placeholder-schedule.svg

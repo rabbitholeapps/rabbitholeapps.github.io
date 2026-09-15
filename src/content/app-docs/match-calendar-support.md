@@ -9,7 +9,7 @@ order: 3
 
 # Match Calendar support
 
-Questions or feedback? Email [justinxhale@gmail.com](mailto:justinxhale@gmail.com?subject=Match%20Calendar%20Support).
+Questions or feedback? Email [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com?subject=Match%20Calendar%20Support).
 
 Please include:
 

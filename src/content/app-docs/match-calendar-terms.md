@@ -22,7 +22,7 @@ By signing in, installing, or using the Service, you agree to these Terms. If yo
 ## 1. Who we are
 
 **Rabbit Hole Apps** publishes Match Calendar.  
-**Contact:** [justinxhale@gmail.com](mailto:justinxhale@gmail.com)  
+**Contact:** [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com)  
 **Support:** [Match Calendar Support](../support/)  
 **Privacy:** [Match Calendar Privacy Policy](../privacy/)
 
@@ -117,4 +117,4 @@ An in-app copy is available at [matchcalendar.web.app/terms](https://matchcalend
 
 ## 13. Contact
 
-[justinxhale@gmail.com](mailto:justinxhale@gmail.com)
+[rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com)

@@ -48,7 +48,7 @@ Local data cannot be recovered once cleared.
 
 ## Option 4: Email us
 
-Email [justinxhale@gmail.com](mailto:justinxhale@gmail.com?subject=Match%20Calendar%20delete%20request) from the address tied to your account. Tell us whether you want Calendar-only deletion or full account deletion. We verify the request and respond within 30 days.
+Email [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com?subject=Match%20Calendar%20delete%20request) from the address tied to your account. Tell us whether you want Calendar-only deletion or full account deletion. We verify the request and respond within 30 days.
 
 ## Before you delete
 
