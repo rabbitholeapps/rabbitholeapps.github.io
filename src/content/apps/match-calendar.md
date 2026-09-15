@@ -25,14 +25,24 @@ extraLinks:
     href: mailto:rabbitholeapps26@gmail.com?subject=Match%20Calendar
 logo: images/apps/match-calendar/logo.svg
 screenshots:
-  - src: images/apps/match-calendar/placeholder-schedule.svg
-    alt: Placeholder for a Match Calendar schedule screenshot
-    caption: Your personal schedule (screenshot coming soon)
-    placeholder: true
-  - src: images/apps/match-calendar/placeholder-money.svg
-    alt: Placeholder for a Match Calendar Money screenshot
-    caption: Pay and expenses (screenshot coming soon)
-    placeholder: true
+  - src: images/apps/match-calendar/calendar.jpg
+    alt: Match Calendar month view with assignment days marked
+    caption: Calendar
+  - src: images/apps/match-calendar/agenda.jpg
+    alt: Match Calendar agenda with next match and this week
+    caption: Agenda
+  - src: images/apps/match-calendar/timeline.jpg
+    alt: Match-day timeline with hotel, flight, and car details
+    caption: Match-day timeline
+  - src: images/apps/match-calendar/money.jpg
+    alt: Money view listing unpaid fees and settlement totals
+    caption: Money
+  - src: images/apps/match-calendar/settlement.jpg
+    alt: Finish settlement with match fee and travel reimbursements
+    caption: Finish settlement
+  - src: images/apps/match-calendar/insights.jpg
+    alt: Insights dashboard with events, travel miles, finances, and positions
+    caption: Insights
 ---
 
 ## Know what is next
