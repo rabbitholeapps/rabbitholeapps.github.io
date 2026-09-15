@@ -421,12 +421,28 @@ h3 {
   background: var(--color-bg-elevated);
 }
 
-.prose-block h2 {
+.prose-block h2,
+.prose-block__label {
+  margin: 0;
   font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-accent);
+}
+
+.app-card .prose-pair {
+  margin-top: 0.25rem;
+}
+
+.app-card .prose-block {
+  padding: var(--space-4);
+}
+
+.app-card .prose-block p:last-child {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
 }
 
 .highlights {
@@ -868,7 +884,6 @@ h3 {
     padding: var(--space-8) 0 var(--space-7);
   }
 
-  .app-grid,
   .prose-pair {
     grid-template-columns: 1fr 1fr;
   }

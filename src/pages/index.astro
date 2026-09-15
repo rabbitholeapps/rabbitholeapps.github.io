@@ -19,7 +19,6 @@ const apps = (await getCollection('apps')).sort((a, b) => a.data.order - b.data.
     <div class="wrap">
       <div class="section__head">
         <h2 id="apps-heading">The apps</h2>
-        <p class="muted">Six products. One standard: keep it simple, and make the interface excellent.</p>
       </div>
       <div class="app-grid">
         {apps.map((app) => <AppCard app={app} />)}

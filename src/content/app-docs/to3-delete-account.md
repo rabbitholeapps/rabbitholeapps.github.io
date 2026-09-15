@@ -39,10 +39,10 @@ Removing your account typically means you will **lose access** to:
 
 ## Before you delete
 
-- If you need a **record** of something (schedules, contacts), save it outside the app first — we may not be able to recover data after deletion.
-- If you only want to **stop using** Tō3, you can **sign out** and uninstall; that does not automatically delete cloud data — use the steps above if you want the account removed.
+- If you need a **record** of something (schedules, contacts), save it outside the app first. We may not be able to recover data after deletion.
+- If you only want to **stop using** Tō3, you can **sign out** and uninstall; that does not automatically delete cloud data. Use the steps above if you want the account removed.
 - To **cancel a subscription** without deleting your account, use the billing management link in the app or on our website.
 
 ## Questions
 
-[rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com) — subject **Tō3 data question**.
+[rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com), subject **Tō3 data question**.

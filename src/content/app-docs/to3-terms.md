@@ -39,8 +39,8 @@ If you use the Service on behalf of an organization, you represent that you have
 
 These Terms work together with:
 
-- The [Tō3 End User License Agreement](/apps/to3/eula/) (**EULA**) — app license and store distribution.
-- The [Tō3 Privacy Policy](/apps/to3/privacy/) — how we handle personal information.
+- The [Tō3 End User License Agreement](/apps/to3/eula/) (**EULA**): app license and store distribution.
+- The [Tō3 Privacy Policy](/apps/to3/privacy/): how we handle personal information.
 
 If there is a conflict about **use of the mobile app**, the **EULA** controls. If there is a conflict about **privacy**, the **Privacy Policy** controls. Otherwise, these Terms govern your use of the Service.
 
@@ -131,7 +131,7 @@ We may change plan prices or features for **new** purchases. We will not reduce 
 
 ## 7. Intellectual property
 
-Tō3 and the Service — including software, design, text, graphics, logos, and trademarks (excluding your User Content) — are owned by Rabbit Hole Apps or our licensors and protected by intellectual property laws.
+Tō3 and the Service, including software, design, text, graphics, logos, and trademarks (excluding your User Content), are owned by Rabbit Hole Apps or our licensors and protected by intellectual property laws.
 
 **Tō3**, **Rabbit Hole Apps**, and related marks are our property. You may not use our names, logos, or marks without our prior written permission, except as allowed by law or store guidelines.
 
@@ -231,5 +231,5 @@ Questions about these Terms:
 
 ---
 
-**Tō3** — Live. Clear. Simple.  
+**Tō3**: Live. Clear. Simple.  
 Published by **Rabbit Hole Apps**.

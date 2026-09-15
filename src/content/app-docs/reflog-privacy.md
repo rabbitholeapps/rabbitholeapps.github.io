@@ -34,8 +34,8 @@ This content is stored locally on your device unless you export or share it your
 
 RefLog may use **Firebase** (Google) services for:
 
-- **Remote Config** — feature flags and in-app configuration (for example, tutorial settings)
-- **Crash and performance diagnostics** — optional crash logs to improve stability (SDK may be present depending on your app version)
+- **Remote Config**: feature flags and in-app configuration (for example, tutorial settings)
+- **Crash and performance diagnostics**: optional crash logs to improve stability (SDK may be present depending on your app version)
 
 We **do not** currently run advertising, remarketing, or user analytics tied to your identity.
 
@@ -74,9 +74,9 @@ We cannot access your local match data remotely.
 
 RefLog uses:
 
-- **Flutter** — app framework (Google)
-- **Firebase** — remote configuration and diagnostics ([Google Privacy Policy](https://policies.google.com/privacy))
-- **Apple App Store / Google Play** — app distribution
+- **Flutter**: app framework (Google)
+- **Firebase**: remote configuration and diagnostics ([Google Privacy Policy](https://policies.google.com/privacy))
+- **Apple App Store / Google Play**: app distribution
 
 If you open a video link (YouTube, Vimeo, etc.) from match info, that site’s privacy policy applies.
 
@@ -105,7 +105,7 @@ We use reasonable measures to protect information we process. No method of stora
 
 We may offer optional cloud backup, sync, or collaboration later. If we do:
 
-- They will be **optional** — local-only use will still work
+- They will be **optional**. Local-only use will still work
 - We will update this policy before those features launch
 - We will describe what is stored, where, and how to delete it
 
@@ -115,6 +115,6 @@ We may update this policy as features change. We will post updates here with a n
 
 ## 11. Contact
 
-Questions about this policy: [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com) — subject **RefLog Privacy**.
+Questions about this policy: [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com), subject **RefLog Privacy**.
 
 Related: [Terms of Use](/apps/reflog/terms/) · [Support](/apps/reflog/support/)

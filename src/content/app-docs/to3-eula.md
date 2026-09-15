@@ -13,7 +13,7 @@ _Last updated: 2 September 2026_
 
 This End User License Agreement (“**Agreement**”) is between you (“**you**” or “**User**”) and **Rabbit Hole Apps** (“**we**,” “**us**,” or “**our**”) for the **Tō3** mobile application (“**Tō3**” or the “**App**”).
 
-Tō3 provides **live, full-duplex voice communication** for events and crews — for example, hosts who open a live room, share a join code, and talk with listeners through the phone and headphones they already own.
+Tō3 provides **live, full-duplex voice communication** for events and crews: for example, hosts who open a live room, share a join code, and talk with listeners through the phone and headphones they already own.
 
 By downloading, installing, accessing, or using Tō3, you agree to this Agreement. If you do not agree, do not use the App.
 
@@ -103,7 +103,7 @@ If you send suggestions, ideas, bug reports, or other feedback about Tō3 (“**
 
 ## 9. Privacy
 
-Tō3 collects personal information — for example, account identifiers, profile fields you provide, event and session metadata, optional push notification tokens, and diagnostic data.
+Tō3 collects personal information: for example, account identifiers, profile fields you provide, event and session metadata, optional push notification tokens, and diagnostic data.
 
 Our privacy practices are described in the **[Tō3 Privacy Policy](/apps/to3/privacy/)**. By using Tō3, you acknowledge that you have read it.
 
@@ -173,5 +173,5 @@ Questions about this Agreement:
 
 ---
 
-**Tō3** — Live. Clear. Simple.  
+**Tō3**: Live. Clear. Simple.  
 Published by **Rabbit Hole Apps**.

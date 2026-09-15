@@ -6,7 +6,7 @@ labels:
   - Free
 order: 4
 problem: Rugby sevens moves too fast for a spreadsheet, and tournament video is not always there. Coaches still need honest numbers they can review after the whistle.
-solution: Sevens Manager lets you log tries, tackles, passes, rucks, and zones live from the sideline — offline, on your phone — then review after the match. Quick enough to use while the game is on.
+solution: Sevens Manager was created to track stats live during the game. Log tries, tackles, passes, rucks, and zones from the sideline on your phone, then review after the match.
 highlights:
   - Live tagging without watching the game through a grid.
   - Works offline as an installable PWA.
@@ -18,14 +18,14 @@ logo: images/apps/sevens-manager/logo.svg
 screenshots:
   - src: images/apps/sevens-manager/placeholder-tag.svg
     alt: Placeholder for a Sevens Manager live tagging screenshot
-    caption: Live tagging — screenshot coming soon
+    caption: Live tagging (screenshot coming soon)
     placeholder: true
   - src: images/apps/sevens-manager/placeholder-stats.svg
     alt: Placeholder for a Sevens Manager stats screenshot
-    caption: Match stats — screenshot coming soon
+    caption: Match stats (screenshot coming soon)
     placeholder: true
 ---
 
 ## Built for the sideline
 
-Sevens Manager is free. Install it on your phone, keep the clock, tag events, and review after the whistle. No account required to start. It was built by a coach who got tired of watching the game through a spreadsheet — and of leaving tournaments with no film and no numbers.
+Sevens Manager is free. Install it on your phone, keep the clock, tag events, and review after the whistle. No account required to start. It was built by a coach who got tired of watching the game through a spreadsheet, and of leaving tournaments with no film and no numbers.

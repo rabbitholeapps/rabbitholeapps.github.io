@@ -56,10 +56,10 @@ When you participate in a live session, **audio is processed in real time** thro
 
 With your permission, the App may access:
 
-- **Microphone** — required for hosts and participants who publish audio in a live room.
-- **Contacts** — only when you use **Browse contacts** to invite hosts; we read contact entries you select for lookup, not your full address book in the background.
-- **Camera / photo library** — only when you choose to add an event image.
-- **Notifications** — if you opt in, to deliver alerts you request (for example, when a session goes live).
+- **Microphone**: required for hosts and participants who publish audio in a live room.
+- **Contacts**: only when you use **Browse contacts** to invite hosts; we read contact entries you select for lookup, not your full address book in the background.
+- **Camera / photo library**: only when you choose to add an event image.
+- **Notifications**: if you opt in, to deliver alerts you request (for example, when a session goes live).
 
 The App may store **limited preferences** on your device (for example, sign-in state or UI choices).
 
@@ -114,9 +114,9 @@ We may disclose information if required by law or to protect rights, safety, and
 
 Where the **GDPR** applies, we rely on:
 
-- **Contract** — providing the service you requested.
-- **Legitimate interests** — security, fraud prevention, debugging, and aggregate analytics.
-- **Consent** — where required (for example, optional notifications or contacts access).
+- **Contract**: providing the service you requested.
+- **Legitimate interests**: security, fraud prevention, debugging, and aggregate analytics.
+- **Consent**: where required (for example, optional notifications or contacts access).
 
 You may withdraw consent where applicable without affecting the lawfulness of processing before withdrawal.
 
@@ -174,5 +174,5 @@ Questions about this Privacy Policy or your data:
 
 ---
 
-**Tō3** — Live. Clear. Simple.  
+**Tō3**: Live. Clear. Simple.  
 Published by **Rabbit Hole Apps**.

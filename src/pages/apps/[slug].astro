@@ -8,6 +8,7 @@ import { withBase } from '../../lib/withBase';
 import { isExternalHref, externalAttrs } from '../../lib/external';
 import { markdownH2s } from '../../lib/slug';
 import { partitionCtas, storeBadge } from '../../lib/storeLinks';
+import ProblemSolution from '../../components/ProblemSolution.astro';
 
 export async function getStaticPaths() {
   const apps = await getCollection('apps');
@@ -83,16 +84,7 @@ function hrefFor(href: string) {
       </div>
     </div>
 
-    <div class="prose-pair">
-      <section class="prose-block" id="problem">
-        <h2>Problem</h2>
-        <p>{problem}</p>
-      </section>
-      <section class="prose-block" id="solution">
-        <h2>Solution</h2>
-        <p>{solution}</p>
-      </section>
-    </div>
+    <ProblemSolution problem={problem} solution={solution} headings />
 
     <section class="app-get" id="get-the-app">
       <h2>Get the app</h2>

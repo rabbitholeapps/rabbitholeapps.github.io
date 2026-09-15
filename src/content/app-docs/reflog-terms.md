@@ -142,4 +142,4 @@ We may update these Terms from time to time. We will post the revised Terms on t
 
 ## 14. Contact
 
-Questions about these Terms: [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com) — subject **RefLog Terms**.
+Questions about these Terms: [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com), subject **RefLog Terms**.

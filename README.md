@@ -1,6 +1,6 @@
 # Rabbit Hole Apps
 
-Marketing site for **Rabbit Hole Apps** — simple tools with fantastic UIs.
+Marketing site for **Rabbit Hole Apps**: simple tools with fantastic UIs.
 
 Built with [Astro](https://astro.build). This folder is the whole site: its own GitHub repo, not part of [justinxhale.github.io](https://justinxhale.github.io).
 
@@ -46,7 +46,7 @@ Update `site` in `astro.config.mjs` once you know the live URL.
 
 ## Add an app
 
-Apps are a content collection. Adding a product is a markdown file plus images — not a new page template.
+Apps are a content collection. Adding a product is a markdown file plus images: not a new page template.
 
 1. Add `src/content/apps/your-slug.md` with the same frontmatter as the existing files (`name`, `tagline`, `status`, `labels`, `order`, `problem`, `solution`, `highlights`, `cta`, `logo`, `screenshots`).
 2. Put the logo and screenshots under `public/images/apps/your-slug/`.
@@ -68,5 +68,7 @@ The route `/apps/your-slug/` is generated from the filename.
 | RefLog | `/apps/reflog/` |
 | RefLog privacy / support / delete | `/apps/reflog/privacy/` · `/support/` · `/delete-account/` |
 | Referee IQ | `/apps/referee-iq/` |
+| Match Calendar | `/apps/match-calendar/` |
+| Match Calendar privacy / terms / support / delete | `/apps/match-calendar/privacy/` · `/terms/` · `/support/` · `/delete-account/` |
 | Referee IQ privacy / support / delete | `/apps/referee-iq/privacy/` · `/support/` · `/delete-account/` |
 | About | `/about/` |

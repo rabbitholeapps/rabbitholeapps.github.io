@@ -42,4 +42,4 @@ When optional cloud sync and collaboration ship:
 
 ## Need help?
 
-[rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com) — subject **RefLog Data Question**.
+[rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com), subject **RefLog Data Question**.

@@ -5,8 +5,8 @@ status: Live
 labels:
   - Free
 order: 5
-problem: Match review used to mean a desk, a download, and hours of coding video. Existing tools assume you will sort it out later, online, with the full file uploaded. Referees need to log events now — on mobile, often with no signal.
-solution: RefLog is a free iPhone and Android app for rugby referees. Log events the way you already think — phase, team, infraction, sanction — with timestamps you can nudge in seconds. It works offline. Export when you are done.
+problem: Existing tools assume you will upload the full film and code it later at a desk. That takes hours, and it does not work when you need to log events now.
+solution: RefLog is a modern way to help referees code their games in a third of the time. Your phone becomes a companion to your viewing device. There is no need to upload film.
 highlights:
   - Ref Mode for film review. Coach Mode for live observation.
   - Offline-first. Stadiums, buses, and hotels all work.
@@ -53,9 +53,9 @@ screenshotGroups:
 
 ## What it does
 
-**Log matches. Review performance. Improve — from the phone already in your hand.**
+**Log matches. Review performance. Improve from the phone already in your hand.**
 
-### Ref Mode — post-match film review
+### Ref Mode: post-match film review
 
 Watch the match and code decisions with timestamps. Built for self-review and a development library.
 
@@ -65,7 +65,7 @@ Watch the match and code decisions with timestamps. Built for self-review and a 
 - PDF export for match reports
 - Filter and search the log
 
-### Coach Mode — live observation and feedback
+### Coach Mode: live observation and feedback
 
 Structured notes during a live match, then holistic feedback for developing referees.
 
@@ -74,7 +74,7 @@ Structured notes during a live match, then holistic feedback for developing refe
 - Timestamped notes on key moments
 - Coach report you can share right after the match
 
-### Tech Zone — match operations (beta)
+### Tech Zone: match operations (beta)
 
 For technical officials and staff, from kickoff to full time.
 
@@ -84,7 +84,7 @@ For technical officials and staff, from kickoff to full time.
 - Period management (halves, extra time)
 - Team colours and customization
 
-Tech Zone is unlocked with a developer gesture. Interested? Email us — or see Support for the tap sequence.
+Tech Zone is unlocked with a developer gesture. Interested? Email us, or see Support for the tap sequence.
 
 ## Why RefLog
 

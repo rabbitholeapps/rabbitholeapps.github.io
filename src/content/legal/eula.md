@@ -142,4 +142,4 @@ Questions about this Agreement:
 
 ---
 
-**Rabbit Hole Apps** — Simple tools. Fantastic UIs.
+**Rabbit Hole Apps**: Simple tools. Fantastic UIs.

@@ -1,4 +1,4 @@
-/** True for http(s) URLs — open these in a new tab. */
+/** True for http(s) URLs. Open these in a new tab. */
 export function isExternalHref(href: string): boolean {
   return /^https?:\/\//i.test(href);
 }

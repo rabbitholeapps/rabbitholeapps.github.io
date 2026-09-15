@@ -1,0 +1,39 @@
+---
+interface Props {
+  problem: string;
+  solution: string;
+  /** Use heading elements and ids (app pages). Cards use labels so a link is not full of h2s. */
+  headings?: boolean;
+}
+
+const { problem, solution, headings = false } = Astro.props;
+---
+
+<div class="prose-pair">
+  {
+    headings ? (
+      <section class="prose-block" id="problem">
+        <h2>Problem</h2>
+        <p>{problem}</p>
+      </section>
+    ) : (
+      <div class="prose-block">
+        <p class="prose-block__label">Problem</p>
+        <p>{problem}</p>
+      </div>
+    )
+  }
+  {
+    headings ? (
+      <section class="prose-block" id="solution">
+        <h2>Solution</h2>
+        <p>{solution}</p>
+      </section>
+    ) : (
+      <div class="prose-block">
+        <p class="prose-block__label">Solution</p>
+        <p>{solution}</p>
+      </div>
+    )
+  }
+</div>
