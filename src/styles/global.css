@@ -433,6 +433,7 @@ h3 {
 
 .app-card .prose-pair {
   margin-top: 0.25rem;
+  grid-template-columns: 1fr;
 }
 
 .app-card .prose-block {
