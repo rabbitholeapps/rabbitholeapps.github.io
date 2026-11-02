@@ -11,6 +11,7 @@ const shot = z.object({
   alt: z.string(),
   caption: z.string().optional(),
   placeholder: z.boolean().optional(),
+  presentation: z.enum(['device', 'artwork']).optional(),
 });
 
 const apps = defineCollection({

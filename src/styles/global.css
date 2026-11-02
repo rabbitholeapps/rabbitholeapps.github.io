@@ -2,8 +2,8 @@
   --color-bg: #0a0a0a;
   --color-bg-elevated: #121212;
   --color-bg-card: #161616;
-  --color-text: #f5f5f5;
-  --color-text-muted: #9c9c9c;
+  --color-text: #fafafa;
+  --color-text-muted: #c4c4c4;
   --color-border: #2a2a2a;
   --color-accent: #fbd823;
   --color-accent-ink: #111;
@@ -22,7 +22,7 @@
   --max: 52rem;
   --header-h: 3.75rem;
   --toc-h: 2.75rem;
-  --leading: 1.55;
+  --leading: 1.6;
 }
 
 *,
@@ -86,8 +86,14 @@ p {
 h1,
 h2,
 h3 {
-  letter-spacing: -0.03em;
-  line-height: 1.15;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+p,
+li {
+  text-wrap: pretty;
 }
 
 h1 {
@@ -257,7 +263,7 @@ h3 {
   padding: var(--space-6) 0 var(--space-7);
   margin-top: var(--space-8);
   color: var(--color-text-muted);
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .site-footer__inner {
@@ -288,7 +294,7 @@ h3 {
   display: inline-block;
   margin-bottom: var(--space-4);
   color: var(--color-accent);
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -364,7 +370,7 @@ h3 {
   border: 1px solid var(--color-border);
   border-radius: 999px;
   color: var(--color-text-muted);
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -424,7 +430,7 @@ h3 {
 .prose-block h2,
 .prose-block__label {
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -443,7 +449,7 @@ h3 {
 .app-card .prose-block p:last-child {
   margin: 0;
   color: var(--color-text-muted);
-  font-size: 0.95rem;
+  font-size: 1rem;
 }
 
 .highlights {
@@ -545,7 +551,7 @@ h3 {
 }
 
 .callout h2 {
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -572,7 +578,7 @@ h3 {
 }
 
 .app-body h3 {
-  font-size: 1.05rem;
+  font-size: 1.125rem;
   margin-top: var(--space-2);
 }
 
@@ -646,7 +652,7 @@ h3 {
   white-space: nowrap;
   color: var(--color-text-muted);
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .app-toc__list a:hover,
@@ -742,7 +748,7 @@ h3 {
   margin: 0;
   padding: 0 var(--space-4) var(--space-3);
   color: var(--color-text-muted);
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .lightbox__count {
@@ -788,7 +794,7 @@ h3 {
 .shot figcaption {
   margin-top: var(--space-3);
   color: var(--color-text-muted);
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-align: center;
 }
 
@@ -814,6 +820,20 @@ h3 {
 
 .phone--placeholder .phone__screen {
   object-fit: contain;
+}
+
+.phone--artwork {
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-card);
+}
+
+.phone--artwork .phone__screen {
+  aspect-ratio: 9 / 16;
+  object-fit: contain;
+  border-radius: calc(var(--radius-lg) - 1px);
 }
 
 .people {
@@ -860,7 +880,7 @@ h3 {
   display: inline-flex;
   margin-bottom: var(--space-4);
   color: var(--color-text-muted);
-  font-size: 0.95rem;
+  font-size: 1rem;
   text-decoration: none;
 }
 
@@ -910,6 +930,10 @@ h3 {
     grid-template-columns: repeat(4, 1fr);
   }
 
+  .shots--artwork {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .phone {
     width: 100%;
     padding: 0.4rem;
@@ -918,6 +942,11 @@ h3 {
 
   .phone__screen {
     border-radius: 0.9rem;
+  }
+
+  .phone--artwork {
+    padding: 0;
+    border-radius: var(--radius-lg);
   }
 }
 
@@ -993,7 +1022,7 @@ h3 {
 
 .legal-app-card__empty {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .legal-contact a {
@@ -1013,5 +1042,19 @@ h3 {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --color-bg-elevated: #0d0d0d;
+    --color-bg-card: #101010;
+    --color-text: #fff;
+    --color-text-muted: #e6e6e6;
+    --color-border: #737373;
+  }
+
+  a {
+    text-decoration-thickness: 2px;
   }
 }

@@ -7,6 +7,7 @@ export interface GalleryShot {
   alt: string;
   caption?: string;
   placeholder?: boolean;
+  presentation?: 'device' | 'artwork';
 }
 
 export interface GalleryGroup {
@@ -43,13 +44,19 @@ function lightboxIndexFor(placeholder?: boolean) {
     groups.map((group) => (
       <section class="shot-group" id={group.id} aria-labelledby={`${group.id}-heading`}>
         <h2 id={`${group.id}-heading`}>{group.heading}</h2>
-        <div class="shots">
+        <div
+          class:list={[
+            'shots',
+            group.shots.every((shot) => shot.presentation === 'artwork') && 'shots--artwork',
+          ]}
+        >
           {group.shots.map((shot) => (
             <ScreenshotFrame
               src={withBase(shot.src)}
               alt={shot.alt}
               caption={shot.caption}
               placeholder={shot.placeholder}
+              presentation={shot.presentation}
               lightboxIndex={lightboxIndexFor(shot.placeholder)}
             />
           ))}
