@@ -36,6 +36,18 @@ Tō3 is for **live, full-duplex voice** around events. Crews, officials, hosts, 
 **Why does the app need the microphone?**  
 The microphone is used when you **join or host a live audio session**. You can leave the session or mute when you are not speaking.
 
+**Can a live session be recorded?**
+
+An eligible primary host may choose recording before taking an event live. Everyone in the room sees a persistent recording notice while recording is active. Leave the room if you do not want your audio included. After the event, event hosts and co-hosts can download the MP3; listeners cannot access recordings through the App.
+
+**How can I request removal of a recording?**
+
+Email [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com) with the subject **Tō3 Recording Removal** and include enough event information for us to locate it.
+
+**Do you use recordings for AI or research?**
+
+Yes. When a session is recorded, we may use the audio and related session metadata to research live communication practices, develop communication frameworks and training materials, and develop or evaluate AI models and tools that support those purposes. Details are in the [Privacy Policy](../privacy/). Leave the room if you do not want your audio included in an active recording.
+
 **Do I need an account?**  
 Yes. Tō3 uses **Firebase Authentication** so your profile and events can sync across devices.
 

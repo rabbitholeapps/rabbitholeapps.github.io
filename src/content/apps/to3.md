@@ -8,9 +8,9 @@ order: 2
 problem: Proprietary radio systems are expensive. Referees, tour guides, and coaches often have to buy dedicated hardware just to stay in sync.
 solution: Tō3 is a live communications app on the phone you already have. Hosts open a room, share a code, and the crew talks full-duplex without buying a radio.
 highlights:
-  - Full-duplex voice without dedicated radios.
+  - Full-duplex voice for crews, without dedicated radios.
   - Create an event, share a code, talk.
-  - Built for crews. Useful anywhere people need to be heard live.
+  - Optional event recording for eligible hosts, with a visible room notice.
 cta:
   label: Get Tō3 on Google Play
   href: https://play.google.com/store/apps/details?id=com.refopenmicapp.ref_open_mic
@@ -48,9 +48,11 @@ screenshots:
 
 **Events and sessions.** Create an event, add sessions, and see who is hosting or listening. Share a code. People join with one tap.
 
-**Sign in.** Email or Google. Same account on every device.
+**Sign in.** Google or Apple. Same account on every device.
 
 **Notifications.** Optional alerts when a session you follow goes live.
+
+**Optional recording.** Eligible primary hosts can choose to record when taking an event live. Everyone sees a persistent recording notice, and event hosts can download the completed MP3 afterward.
 
 ## Keep it simple
 

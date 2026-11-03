@@ -17,7 +17,7 @@ Tō3 uses a **cloud account** (Firebase Authentication) and stores **profile and
 2. Tap **Delete account**.
 3. Read the warning, then confirm by typing **DELETE**.
 
-This permanently removes your account and associated data we hold. If you have an active web subscription, deletion **cancels billing immediately** and **forfeits** any remaining paid time, as described in our [Privacy Policy](../privacy/) and [Terms of Use](../terms/).
+This permanently removes your Firebase Authentication account and Tō3 profile, cancels active billing, and removes your active roster and participant records. It also **forfeits** any remaining paid time, as described in our [Privacy Policy](../privacy/) and [Terms of Use](../terms/). The current event-history and recording exceptions are described below.
 
 ## Option 2: Request deletion by email
 
@@ -34,6 +34,10 @@ Removing your account typically means you will **lose access** to:
 
 - Your **Tō3 profile** (display name, optional photo, preferences you stored with us)
 - **Events and sessions** tied to your account, subject to how we implement deletion and any legal holds
+
+For events where you were the only remaining creator, Tō3 archives the event and changes the creator display name to **Deleted account**. Shared event history may remain for other hosts, and an archived event record may retain a no-longer-active creator identifier.
+
+Account deletion does not currently remove a composite event recording that may also contain other participants. To request removal, email [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com?subject=T%C5%8D3%20Recording%20Removal) with enough event information for us to locate it.
 
 **Live sessions** you hosted may also end or become unavailable to other participants once the account is removed, depending on timing and technical constraints.
 

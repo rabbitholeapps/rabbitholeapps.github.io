@@ -9,7 +9,7 @@ order: 1
 
 # End User License Agreement for Tō3
 
-_Last updated: 2 September 2026_
+_Last updated: 2 November 2026_
 
 This End User License Agreement (“**Agreement**”) is between you (“**you**” or “**User**”) and **Rabbit Hole Apps** (“**we**,” “**us**,” or “**our**”) for the **Tō3** mobile application (“**Tō3**” or the “**App**”).
 
@@ -61,7 +61,7 @@ You are responsible for activity under your account and for keeping your device 
 
 Tō3 lets you create and participate in **events**, **sessions**, and related content (for example, titles, schedules, display names, invites, and participation metadata) (“**User Content**”). When you host or join a live session, the App uses your device **microphone** to send audio in real time.
 
-You retain ownership of your User Content. By submitting User Content or participating in a session, you grant us a worldwide, non-exclusive, royalty-free license to use, host, store, reproduce, display, and transmit that content **only as needed to operate, provide, secure, and improve Tō3** (for example, showing your display name in a room or routing audio through our infrastructure).
+You retain ownership of your User Content. By submitting User Content or participating in a session, you grant us a worldwide, non-exclusive, royalty-free license to use, host, store, reproduce, display, transmit, and analyze that content as needed to **operate, provide, secure, and improve Tō3**, and—for optional event recordings and related metadata—to **research communication practices**, **develop communication frameworks and training materials**, and **develop, evaluate, and improve AI models and tools** that support those purposes (including through contracted processors).
 
 You represent that:
 
@@ -71,7 +71,7 @@ You represent that:
 
 We may remove User Content or suspend access that violates this Agreement, applicable law, or creates risk to users or the service.
 
-**Audio:** Live audio is processed in real time to deliver sessions. Unless we separately announce a recording feature, do not assume sessions are recorded or stored by us for playback.
+**Audio and recording:** Live audio is processed in real time to deliver sessions. An eligible primary host may opt to record a session when taking it live. Tō3 displays a persistent notice while recording is active. If you remain in the room, your transmitted audio may be included in the recording and may be used as described above and in the Privacy Policy; leave the room if you do not want your audio recorded.
 
 ---
 
@@ -103,7 +103,7 @@ If you send suggestions, ideas, bug reports, or other feedback about Tō3 (“**
 
 ## 9. Privacy
 
-Tō3 collects personal information: for example, account identifiers, profile fields you provide, event and session metadata, optional push notification tokens, and diagnostic data.
+Tō3 collects personal information: for example, account identifiers, profile fields you provide, event and session metadata, optional event recordings, optional push notification tokens, and diagnostic data.
 
 Our privacy practices are described in the **[Tō3 Privacy Policy](/apps/to3/privacy/)**. By using Tō3, you acknowledge that you have read it.
 

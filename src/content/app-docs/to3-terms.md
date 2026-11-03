@@ -9,9 +9,9 @@ order: 3
 
 # Terms of Use for Tō3
 
-_Last updated: 3 September 2026_
+_Last updated: 2 November 2026_
 
-These Terms of Use (“**Terms**”) are a legal agreement between you (“**you**”) and **Rabbit Hole Apps** (“**we**,” “**us**,” or “**our**”) for the **Tō3** mobile application, related websites (including plan selection and billing pages), and services we provide in connection with Tō3 (collectively, the “**Service**”).
+These Terms of Use (“**Terms**”) are a legal agreement between you (“**you**”) and **Justin Xavier Hale, doing business as Rabbit Hole Apps** (“**we**,” “**us**,” or “**our**”) for the **Tō3** mobile application, related websites (including plan selection and billing pages), and services we provide in connection with Tō3 (collectively, the “**Service**”).
 
 Tō3 provides **live, full-duplex voice communication** for events and crews.
 
@@ -21,7 +21,8 @@ By accessing or using the Service, you agree to these Terms. If you do not agree
 
 ## 1. Who we are
 
-**Rabbit Hole Apps** publishes Tō3.  
+**Justin Xavier Hale publishes Tō3 under the Rabbit Hole Apps name.**
+
 **Contact:** [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com)  
 **Legal hub:** [rabbitholeapps.com/legal](/legal/)
 
@@ -64,9 +65,9 @@ You are responsible for activity under your account. You may **delete your accou
 
 ## 5. User content
 
-The Service lets you create and share **User Content**, including event titles, schedules, venue text, display names, invites, optional images, and participation in **live audio sessions**.
+The Service lets you create and share **User Content**, including event titles, schedules, venue text, display names, invites, optional images, participation in **live audio sessions**, and audio included in an optional event recording.
 
-You **retain ownership** of your User Content. By submitting User Content or joining a session, you grant us a worldwide, non-exclusive, royalty-free license to host, store, reproduce, display, transmit, and otherwise use that content **only to operate, provide, secure, and improve the Service** (for example, showing your display name in a room or routing audio through our infrastructure).
+You **retain ownership** of your User Content. By submitting User Content or joining a session, you grant us a worldwide, non-exclusive, royalty-free license to host, store, reproduce, display, transmit, analyze, and otherwise use that content to **operate, provide, secure, and improve the Service**, and—for optional event recordings and related metadata—to **research communication practices**, **develop communication frameworks and training materials**, and **develop, evaluate, and improve AI models and tools** that support those purposes (including through contracted processors). Examples include showing your display name in a room, routing audio through our infrastructure, and studying recorded sessions to improve crew communication guidance.
 
 You represent that:
 
@@ -74,7 +75,9 @@ You represent that:
 - Your User Content does not violate law or third-party rights.
 - Your use of the microphone and participation in sessions complies with applicable law and any rules of the event or organization you serve.
 
-**Live audio** is processed in real time. Unless we separately announce recording, do not assume sessions are recorded or stored by us for playback.
+**Live audio** is processed in real time. An eligible primary host may opt to record a session when taking it live. Tō3 displays a persistent notice in the room while recording is active. If you remain in the room, your transmitted audio may be included in the recording; leave the room if you do not want your audio recorded.
+
+Hosts must use recording only when permitted by applicable law and any event, league, workplace, or organization rules. Hosts are responsible for any additional notice or consent required in their jurisdiction. Event hosts and co-hosts may download a completed recording; listeners do not receive recording access through the App.
 
 ### 5.1 Acceptable use
 

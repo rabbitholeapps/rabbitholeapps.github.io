@@ -9,7 +9,7 @@ order: 2
 
 # Privacy Policy for Tō3
 
-_Last updated: 3 September 2026_
+_Last updated: 2 November 2026_
 
 Tō3 (“**we**,” “**our**,” or “**us**”) is published by **Rabbit Hole Apps**. This Privacy Policy explains how we collect, use, share, and protect information when you use the **Tō3** mobile application and related websites (for example, plan selection and billing pages).
 
@@ -19,7 +19,8 @@ By using Tō3, you agree to this policy. If you do not agree, do not use the App
 
 ## 1. Who we are
 
-**Data controller:** Rabbit Hole Apps  
+**Data controller:** Justin Xavier Hale, doing business as Rabbit Hole Apps
+
 **Privacy contact:** [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com)  
 **Legal hub:** [rabbitholeapps.com/legal](/legal/)
 
@@ -48,9 +49,15 @@ Depending on how you use Tō3, we may process:
 - **Session participation metadata** needed to operate rooms (for example, connection state, mute state, host/listener role).
 - **Optional event images** you upload.
 
-### 3.3 Real-time audio
+### 3.3 Real-time audio and optional recordings
 
-When you participate in a live session, **audio is processed in real time** through our real-time communications infrastructure (**LiveKit** and related services) to deliver the session. **We do not describe recording features here**; if we add recording later, we will update this policy.
+When you participate in a live session, **audio is processed in real time** through our real-time communications infrastructure (**LiveKit** and related services) to deliver the session.
+
+An eligible primary host may opt to record a session when taking it live. Tō3 displays a persistent notice to everyone in the room while recording is active. The resulting room-composite audio is stored as an MP3 in our Google Cloud / Firebase Storage infrastructure. Event hosts and co-hosts may download it through a short-lived link; listeners do not receive recording access through the App.
+
+If you do not want your audio included in an active recording, leave the room. Hosts are responsible for using recording in accordance with applicable law and any event or organization rules.
+
+**Secondary uses of recordings.** When a session is recorded, we may also use the resulting audio (and related session metadata such as roles or timing) to **research and improve live communication practices**, to **develop communication frameworks and training materials**, and to **develop, evaluate, and improve artificial-intelligence (AI) models and tools** that support those purposes. We may use service providers under contract—including AI and cloud processors—to help with that work. We do **not** sell recordings for third-party advertising. Where practical, we prefer aggregated or de-identified analysis; a composite recording may still include identifiable voices of people who spoke while recording was active.
 
 ### 3.4 Device permissions and on-device data
 
@@ -58,7 +65,7 @@ With your permission, the App may access:
 
 - **Microphone**: required for hosts and participants who publish audio in a live room.
 - **Contacts**: only when you use **Browse contacts** to invite hosts; we read contact entries you select for lookup, not your full address book in the background.
-- **Camera / photo library**: only when you choose to add an event image.
+- **Photo library**: only when you choose to add a profile or event image.
 - **Notifications**: if you opt in, to deliver alerts you request (for example, when a session goes live).
 
 The App may store **limited preferences** on your device (for example, sign-in state or UI choices).
@@ -85,7 +92,9 @@ We use information to:
 
 - Provide, secure, and improve Tō3.
 - Authenticate users and authorize access to events and rooms.
-- Operate live audio sessions and related notifications.
+- Operate live audio sessions, optional recordings and host downloads, and related notifications.
+- Research communication practices and develop communication frameworks and training materials from optional event recordings and related metadata.
+- Develop, evaluate, and improve AI models and tools that support those communication frameworks and the Service, including through contracted processors where needed.
 - Process subscriptions and entitlements (via Stripe and our servers).
 - Diagnose crashes and understand aggregate usage.
 - Comply with law and enforce our [EULA](/apps/to3/eula/) when necessary.
@@ -98,11 +107,12 @@ We use service providers that process data on our behalf, including:
 
 | Provider | Purpose |
 |----------|---------|
-| **Google Firebase** | Authentication, database, messaging, analytics, crash reporting, remote configuration |
-| **LiveKit** | Real-time audio session infrastructure |
+| **Google Firebase / Google Cloud** | Authentication, database, storage, messaging, analytics, crash reporting, remote configuration, and recording-file storage |
+| **LiveKit** | Real-time audio session and recording infrastructure |
 | **Stripe** | Web checkout, subscriptions, and billing portal |
 | **Google Places** | Optional address suggestions when creating events |
 | **Google / Apple** | Sign-in |
+| **AI / analysis processors (as used)** | Contracted tools that help us research recordings, develop communication frameworks, or train/evaluate AI models for those purposes |
 
 We **do not sell** your personal information as “sale” is commonly understood under **CCPA/CPRA**. We **do not show third-party advertising** in Tō3.
 
@@ -115,8 +125,8 @@ We may disclose information if required by law or to protect rights, safety, and
 Where the **GDPR** applies, we rely on:
 
 - **Contract**: providing the service you requested.
-- **Legitimate interests**: security, fraud prevention, debugging, and aggregate analytics.
-- **Consent**: where required (for example, optional notifications or contacts access).
+- **Legitimate interests**: security, fraud prevention, debugging, aggregate analytics, product research, communication-framework development, and AI model development or evaluation using optional recordings where permitted.
+- **Consent**: where required (for example, optional notifications, contacts access, or recording consent required by local law).
 
 You may withdraw consent where applicable without affecting the lawfulness of processing before withdrawal.
 
@@ -136,7 +146,9 @@ We will verify requests and respond within the time required by applicable law.
 
 ## 8. Retention
 
-We retain information as long as needed to provide Tō3 and for legitimate business needs (for example, security, backups, and legal compliance). When you delete your account, we delete or anonymize your profile and scrub your identifier from active event data according to our deletion process. Some records may be retained where law requires.
+We retain information as long as needed to provide Tō3 and for legitimate business needs (for example, security, backups, and legal compliance). This currently includes optional event recording files; automatic recording deletion is not currently configured. Event hosts may request removal of a recording by emailing us.
+
+When you delete your account, we delete your Firebase Authentication account and profile, remove your identifier from active rosters and participant records, anonymize your creator display name, and archive events where you were the only remaining creator. Some archived event records may retain a no-longer-active creator identifier. Account deletion does not currently remove a composite event recording that may also contain other participants; contact us to request recording removal. Some records may be retained where law requires.
 
 ---
 
@@ -166,7 +178,7 @@ We may update this policy from time to time. We will post the new “Last update
 
 ## 13. Contact
 
-Questions about this Privacy Policy or your data:
+Questions about this Privacy Policy, your data, or removal of a recording:
 
 - **Email:** [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com)
 - **Legal hub:** [rabbitholeapps.com/legal](/legal/)
