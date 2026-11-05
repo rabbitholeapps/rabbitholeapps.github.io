@@ -154,19 +154,19 @@ const money = new Intl.NumberFormat('en-US', {
       </label>
 
       <fieldset class="crew-cost__headphone-options">
-        <legend>Tō3 headphone option</legend>
-        <label>
-          <input type="radio" name="headphones" value="own" checked />
-          <span>
-            <strong>Officials use their own headphones</strong>
-            <small>$0 additional cost</small>
-          </span>
-        </label>
+        <legend>Who purchases headphones?</legend>
         <label>
           <input type="radio" name="headphones" value="provided" />
           <span>
-            <strong>Organization provides headphones</strong>
-            <small>${optionalHeadsetCost} per official, purchased once</small>
+            <strong>Organization</strong>
+            <small>${optionalHeadsetCost} per official · one-time purchase</small>
+          </span>
+        </label>
+        <label>
+          <input type="radio" name="headphones" value="own" checked />
+          <span>
+            <strong>User</strong>
+            <small>Uses their own headphones · $0 additional cost</small>
           </span>
         </label>
       </fieldset>
@@ -571,13 +571,14 @@ const money = new Intl.NumberFormat('en-US', {
     pointer-events: none;
   }
 
-  .crew-cost__money-input input {
-    padding-left: 1.65rem;
+  .crew-cost__money-input input[type='number'] {
+    padding-inline-start: 2rem;
   }
 
   .crew-cost__headphone-options {
     display: grid;
     grid-column: 1 / -1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--space-3);
     margin: 0;
     padding: 0;
@@ -585,6 +586,7 @@ const money = new Intl.NumberFormat('en-US', {
   }
 
   .crew-cost__headphone-options legend {
+    grid-column: 1 / -1;
     margin-bottom: var(--space-2);
     color: var(--color-text);
     font-weight: 600;
@@ -592,6 +594,7 @@ const money = new Intl.NumberFormat('en-US', {
 
   .crew-cost__headphone-options label {
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     gap: var(--space-3);
     padding: var(--space-4);
@@ -609,12 +612,13 @@ const money = new Intl.NumberFormat('en-US', {
     flex: none;
     width: 1.2rem;
     height: 1.2rem;
-    margin-top: 0.15rem;
+    margin: 0;
     accent-color: var(--color-accent);
   }
 
   .crew-cost__headphone-options label > span {
     display: grid;
+    width: 100%;
     gap: 0.15rem;
   }
 
@@ -672,14 +676,6 @@ const money = new Intl.NumberFormat('en-US', {
     .crew-cost__controls {
       grid-template-columns: 1fr 1fr;
       align-items: end;
-    }
-
-    .crew-cost__headphone-options {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .crew-cost__headphone-options legend {
-      grid-column: 1 / -1;
     }
 
     .crew-cost__results {
