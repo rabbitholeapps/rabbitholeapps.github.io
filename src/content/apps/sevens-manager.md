@@ -1,6 +1,7 @@
 ---
 name: Sevens Manager
 tagline: Sideline analytics when you do not have the film.
+description: Sevens Manager lets rugby coaches tag match events from the sideline and review useful statistics without relying on video.
 status: Live
 labels:
   - Free

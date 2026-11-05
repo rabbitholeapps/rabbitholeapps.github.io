@@ -1,6 +1,7 @@
 ---
 name: MatchReadyTX
 tagline: Referee scheduling that still starts with the spreadsheet.
+description: MatchReadyTX gives referee organizations a clear scheduling and confirmation app while Google Sheets remains the source of truth.
 status: Live
 labels:
   - Free

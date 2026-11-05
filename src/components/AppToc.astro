@@ -33,6 +33,8 @@ const { items } = Astro.props;
     if (!toc) return;
 
     const links = [...toc.querySelectorAll<HTMLAnchorElement>('a[href^="#"]')];
+    const list = toc.querySelector<HTMLElement>('.app-toc__list');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const sections = links
       .map((link) => {
         const id = link.hash.slice(1);
@@ -49,8 +51,15 @@ const { items } = Astro.props;
         if (!visible?.target.id) return;
         const current = `#${visible.target.id}`;
         for (const link of links) {
-          if (link.hash === current) link.setAttribute('aria-current', 'location');
-          else link.removeAttribute('aria-current');
+          if (link.hash === current) {
+            link.setAttribute('aria-current', 'location');
+            if (list) {
+              const targetLeft = link.offsetLeft - (list.clientWidth - link.offsetWidth) / 2;
+              list.scrollTo({ left: targetLeft, behavior: reduceMotion ? 'auto' : 'smooth' });
+            }
+          } else {
+            link.removeAttribute('aria-current');
+          }
         }
       },
       { rootMargin: '-35% 0px -50% 0px', threshold: [0.1, 0.35, 0.6] },

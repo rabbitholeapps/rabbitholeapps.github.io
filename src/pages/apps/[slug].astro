@@ -9,6 +9,7 @@ import { isExternalHref, externalAttrs } from '../../lib/external';
 import { markdownH2s } from '../../lib/slug';
 import { partitionCtas, storeBadge } from '../../lib/storeLinks';
 import ProblemSolution from '../../components/ProblemSolution.astro';
+import CrewCostComparison from '../../components/CrewCostComparison.astro';
 
 export async function getStaticPaths() {
   const apps = await getCollection('apps');
@@ -22,6 +23,7 @@ const { app } = Astro.props;
 const {
   name,
   tagline,
+  description,
   status,
   labels,
   problem,
@@ -29,6 +31,8 @@ const {
   highlights,
   cta,
   extraLinks,
+  tocLabels,
+  crewCostComparison,
   setup,
   github,
   logo,
@@ -46,17 +50,19 @@ const groups = screenshotGroups?.length
   ? screenshotGroups
   : [{ heading: 'In the app', id: 'in-the-app', shots: screenshots }];
 
+const { store, rest } = partitionCtas([cta, ...extraLinks]);
+const hasMoreLinks = rest.length > 0 || Boolean(github);
+
 const toc = [
   { id: 'problem', label: 'Problem' },
   { id: 'solution', label: 'Solution' },
-  { id: 'get-the-app', label: 'Get the app' },
+  ...(crewCostComparison ? [{ id: 'cost-comparison', label: 'Cost' }] : []),
+  ...(hasMoreLinks ? [{ id: 'get-the-app', label: 'Get the app' }] : []),
   ...markdownH2s(app.body ?? ''),
   ...(setup ? [{ id: 'get-set-up', label: 'Get set up' }] : []),
   ...groups.map((group) => ({ id: group.id, label: group.heading })),
   ...(docs.length ? [{ id: 'privacy-and-support', label: 'Privacy and support' }] : []),
-];
-
-const { store, rest } = partitionCtas([cta, ...extraLinks]);
+].map((item) => ({ ...item, label: tocLabels[item.id] ?? item.label }));
 
 function hrefFor(href: string) {
   if (isExternalHref(href) || href.startsWith('mailto:')) return href;
@@ -64,74 +70,80 @@ function hrefFor(href: string) {
 }
 ---
 
-<BaseLayout title={name} description={tagline}>
+<BaseLayout title={name} description={description ?? tagline}>
   <AppToc items={toc} />
   <article class="wrap app-page">
     <div class="app-page-hero">
       <a class="back" href={withBase('apps/')}>← All apps</a>
-      <div class="app-page-hero__brand">
-        <img class="app-page-hero__logo" src={withBase(logo)} alt="" width="68" height="68" />
-        <div class="app-page-hero__copy">
-          <div class="badge-row">
-            <span class:list={['badge', status === 'Live' && 'badge--live']}>{status}</span>
-            {labels.map((label) => (
-              <span class="badge badge--accent">{label}</span>
-            ))}
+      <div class="app-page-hero__main">
+        <div class="app-page-hero__brand">
+          <img class="app-page-hero__logo" src={withBase(logo)} alt="" width="68" height="68" />
+          <div class="app-page-hero__copy">
+            <div class="badge-row">
+              <span class:list={['badge', status === 'Live' && 'badge--live']}>{status}</span>
+              {labels.map((label) => (
+                <span class="badge badge--accent">{label}</span>
+              ))}
+            </div>
+            <h1>{name}</h1>
+            <p class="lede">{tagline}</p>
           </div>
-          <h1>{name}</h1>
-          <p class="lede">{tagline}</p>
         </div>
+        {
+          store.length > 0 && (
+            <div class="app-page-hero__actions" role="group" aria-label="Download the app">
+              <div class="store-badges">
+                {store.map((item) => {
+                  const badge = storeBadge(item.kind);
+                  return (
+                    <a
+                      class="store-badge"
+                      href={item.href}
+                      aria-label={badge.alt}
+                      {...externalAttrs(item.href)}
+                    >
+                      <img src={withBase(badge.src)} alt="" height="52" />
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
+          )
+        }
       </div>
     </div>
 
     <ProblemSolution problem={problem} solution={solution} headings />
 
-    <section class="app-get" id="get-the-app">
-      <h2>Get the app</h2>
-      <div class="cta-row">
-        {
-          store.length > 0 && (
-            <div class="store-badges">
-              {store.map((item) => {
-                const badge = storeBadge(item.kind);
-                return (
-                  <a
-                    class="store-badge"
-                    href={item.href}
-                    aria-label={badge.alt}
-                    {...externalAttrs(item.href)}
-                  >
-                    <img src={withBase(badge.src)} alt="" height="52" />
-                  </a>
-                );
-              })}
-            </div>
-          )
-        }
-        {
-          rest.map((link, index) => (
-            <a
-              class:list={['cta', (store.length > 0 || index > 0) && 'cta--ghost']}
-              href={hrefFor(link.href)}
-              {...externalAttrs(link.href)}
-            >
-              {link.label}
-            </a>
-          ))
-        }
-        {
-          github && (
-            <a class="cta cta--ghost" href={hrefFor(github)} {...externalAttrs(github)}>
-              View source on GitHub
-            </a>
-          )
-        }
-      </div>
-    </section>
+    {
+      hasMoreLinks && (
+        <section class="app-get" id="get-the-app">
+          <h2>Get the app</h2>
+          <div class="cta-row">
+            {rest.map((link, index) => (
+              <a
+                class:list={['cta', index > 0 && 'cta--ghost']}
+                href={hrefFor(link.href)}
+                {...externalAttrs(link.href)}
+              >
+                {link.label}
+              </a>
+            ))}
+            {github && (
+              <a class="cta cta--ghost" href={hrefFor(github)} {...externalAttrs(github)}>
+                View source on GitHub
+              </a>
+            )}
+          </div>
+        </section>
+      )
+    }
 
     <ul class="highlights">
       {highlights.map((item) => <li>{item}</li>)}
     </ul>
+
+    {crewCostComparison && <CrewCostComparison {...crewCostComparison} />}
 
     {
       hasBody && (

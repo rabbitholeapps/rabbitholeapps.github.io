@@ -19,6 +19,7 @@ const apps = defineCollection({
   schema: z.object({
     name: z.string(),
     tagline: z.string(),
+    description: z.string().optional(),
     status: z.enum(['Live', 'In development']),
     labels: z.array(z.string()).default([]),
     order: z.number(),
@@ -27,6 +28,17 @@ const apps = defineCollection({
     highlights: z.array(z.string()).max(3),
     cta: link,
     extraLinks: z.array(link).default([]),
+    tocLabels: z.record(z.string(), z.string()).default({}),
+    crewCostComparison: z
+      .object({
+        radioOfficialCost: z.number(),
+        crewSize: z.number(),
+        proPlusAnnualCost: z.number(),
+        optionalHeadsetCost: z.number(),
+        defaultCrews: z.number().default(10),
+        defaultYears: z.number().default(4),
+      })
+      .optional(),
     setup: z.string().optional(),
     github: z.string().url().optional(),
     logo: z.string(),

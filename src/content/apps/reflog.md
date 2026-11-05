@@ -1,6 +1,7 @@
 ---
 name: RefLog
 tagline: The modern referee’s match companion.
+description: RefLog helps referees and coaches timestamp match events, capture observations, and export reports from a phone, even offline.
 status: Live
 labels:
   - Free

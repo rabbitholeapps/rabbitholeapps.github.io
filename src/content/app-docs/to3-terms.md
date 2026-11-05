@@ -95,7 +95,7 @@ We may remove User Content or suspend or terminate accounts that violate these T
 
 ## 6. Paid plans and billing
 
-Some features require a **paid plan** (for example, Pro or Pro+ host limits).
+Some features require a **Pro+ plan** rather than the Free plan.
 
 **Important:** Tō3 does **not** sell subscriptions through Apple or Google in-app purchase at launch. You purchase on our **website** via **Stripe** using the same account you use in the App. The App reads your entitlement from our servers after payment.
 

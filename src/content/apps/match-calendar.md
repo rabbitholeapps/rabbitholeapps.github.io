@@ -1,6 +1,7 @@
 ---
 name: Match Calendar
 tagline: Your assignments, travel, and pay. One personal schedule.
+description: Match Calendar keeps sports officials' assignments, travel plans, fees, expenses, and reimbursements in one personal schedule.
 status: Live
 labels:
   - Web app

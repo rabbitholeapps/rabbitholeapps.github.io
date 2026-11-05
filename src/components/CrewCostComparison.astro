@@ -1,0 +1,689 @@
+---
+interface Props {
+  radioOfficialCost: number;
+  crewSize: number;
+  proPlusAnnualCost: number;
+  optionalHeadsetCost: number;
+  defaultCrews?: number;
+  defaultYears?: number;
+}
+
+const {
+  radioOfficialCost,
+  crewSize,
+  proPlusAnnualCost,
+  optionalHeadsetCost,
+  defaultCrews = 10,
+  defaultYears = 4,
+} = Astro.props;
+
+const radioCrewCost = radioOfficialCost * crewSize;
+const defaultRadioTotal = radioCrewCost * defaultCrews;
+const defaultTo3Total = proPlusAnnualCost * defaultCrews * defaultYears;
+const defaultSavings = defaultRadioTotal - defaultTo3Total;
+const defaultSavingsPercent = Math.round((defaultSavings / defaultRadioTotal) * 100);
+const defaultSponsoredCrews = Math.floor(defaultRadioTotal / (proPlusAnnualCost * defaultYears));
+
+const money = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+  minimumFractionDigits: 0,
+  maximumFractionDigits: 0,
+});
+---
+
+<section
+  class="crew-cost"
+  id="cost-comparison"
+  aria-labelledby="cost-comparison-heading"
+  data-crew-cost
+  data-radio-official-cost={radioOfficialCost}
+  data-crew-size={crewSize}
+  data-pro-plus-annual-cost={proPlusAnnualCost}
+  data-optional-headset-cost={optionalHeadsetCost}
+>
+  <div class="crew-cost__intro">
+    <p class="crew-cost__eyebrow" data-headline-context>
+      Four years · {defaultCrews} crews
+    </p>
+    <h2 id="cost-comparison-heading">Equip more crews for less.</h2>
+    <p>
+      One Pro+ subscriber sponsors a three-person crew with two Free co-hosts. The subscriber
+      must stay on mic for the crew to keep the sponsored limits.
+    </p>
+  </div>
+
+  <div class="crew-cost__headline" aria-label="Default four-year comparison">
+    <article class="crew-cost__total">
+      <p class="crew-cost__label">Traditional radios</p>
+      <p class="crew-cost__number" data-headline-radio>{money.format(defaultRadioTotal)}</p>
+      <p data-headline-radio-detail>
+        {defaultCrews} crews · {defaultCrews * crewSize} radios and headsets upfront
+      </p>
+      <div class="crew-cost__bar" aria-hidden="true">
+        <span style="width: 100%" data-radio-bar></span>
+      </div>
+    </article>
+
+    <article class="crew-cost__total crew-cost__total--to3">
+      <p class="crew-cost__label">Tō3 Pro+</p>
+      <p class="crew-cost__number" data-headline-to3>{money.format(defaultTo3Total)}</p>
+      <p data-headline-to3-detail>
+        {defaultCrews} subscriptions · {defaultYears} years · officials' own headphones
+      </p>
+      <div class="crew-cost__bar" aria-hidden="true">
+        <span
+          style={`width: ${Math.round((defaultTo3Total / defaultRadioTotal) * 100)}%`}
+          data-to3-bar
+        ></span>
+      </div>
+    </article>
+  </div>
+
+  <div class="crew-cost__savings">
+    <p class="crew-cost__savings-number" data-savings-headline>
+      Save about {defaultSavingsPercent}%
+    </p>
+    <p data-savings-copy>
+      {money.format(defaultSavings)} less over four years before optional headphone purchases.
+    </p>
+  </div>
+
+  <div class="crew-cost__reach">
+    <div>
+      <p class="crew-cost__label" data-budget-label>Same {money.format(defaultRadioTotal)} budget</p>
+      <p class="crew-cost__reach-number">
+        <strong data-budget-radio-crews>{defaultCrews}</strong> radio-equipped crews
+        <span>or</span>
+        <strong data-budget-to3-crews>{defaultSponsoredCrews}</strong> Tō3-sponsored crews
+      </p>
+    </div>
+    <p data-budget-copy>
+      That is {defaultSponsoredCrews * crewSize} officials across {defaultSponsoredCrews} matches,
+      using one Pro+ subscriber and two Free co-hosts per crew.
+    </p>
+  </div>
+
+  <div class="crew-cost__calculator">
+    <div class="crew-cost__calculator-copy">
+      <p class="crew-cost__eyebrow">Estimate your organization</p>
+      <h3>Use your own crew and equipment costs.</h3>
+      <p>New headsets are optional. Tō3 uses smartphones officials already own.</p>
+    </div>
+
+    <form class="crew-cost__controls" data-cost-controls>
+      <label class="crew-cost__range">
+        <span>Number of crews</span>
+        <output for="crew-count" data-crews-output>{defaultCrews} crews</output>
+        <input
+          id="crew-count"
+          type="range"
+          name="crews"
+          min="1"
+          max="60"
+          step="1"
+          value={defaultCrews}
+        />
+        <span class="crew-cost__range-bounds" aria-hidden="true"><span>1</span><span>60</span></span>
+      </label>
+      <label>
+        <span>Radio + headset per official</span>
+        <span class="crew-cost__money-input">
+          <span aria-hidden="true">$</span>
+          <input
+            type="number"
+            name="radioOfficialCost"
+            min="0"
+            step="0.01"
+            inputmode="decimal"
+            value={radioOfficialCost}
+          />
+        </span>
+      </label>
+      <label>
+        <span>Number of years</span>
+        <input
+          type="number"
+          name="years"
+          min="1"
+          max="20"
+          step="1"
+          inputmode="numeric"
+          value={defaultYears}
+        />
+      </label>
+
+      <fieldset class="crew-cost__headphone-options">
+        <legend>Tō3 headphone option</legend>
+        <label>
+          <input type="radio" name="headphones" value="own" checked />
+          <span>
+            <strong>Officials use their own headphones</strong>
+            <small>$0 additional cost</small>
+          </span>
+        </label>
+        <label>
+          <input type="radio" name="headphones" value="provided" />
+          <span>
+            <strong>Organization provides headphones</strong>
+            <small>${optionalHeadsetCost} per official, purchased once</small>
+          </span>
+        </label>
+      </fieldset>
+    </form>
+
+    <div class="crew-cost__results" aria-live="polite" aria-atomic="true">
+      <article>
+        <p class="crew-cost__label">Traditional radios</p>
+        <p class="crew-cost__result-number" data-radio-total>{money.format(defaultRadioTotal)}</p>
+        <p data-radio-detail>{defaultCrews * crewSize} radio-and-headset setups</p>
+      </article>
+      <article>
+        <p class="crew-cost__label">Tō3 Pro+</p>
+        <p class="crew-cost__result-number" data-to3-total>{money.format(defaultTo3Total)}</p>
+        <p data-to3-detail>{defaultCrews} subscriptions for {defaultYears} years</p>
+      </article>
+      <article class="crew-cost__result-savings">
+        <p class="crew-cost__label" data-difference-label>You save</p>
+        <p class="crew-cost__result-number" data-difference>{money.format(defaultSavings)}</p>
+        <p data-difference-detail>{defaultSavingsPercent}% less with Tō3</p>
+      </article>
+    </div>
+  </div>
+
+  <div class="crew-cost__operations">
+    <div>
+      <p class="crew-cost__eyebrow">Beyond the purchase price</p>
+      <h3>No shared equipment pool to move.</h3>
+    </div>
+    <ul>
+      <li>No distributing radio sets before each match.</li>
+      <li>No collecting equipment after full time.</li>
+      <li>No charging a shared bank of radios.</li>
+      <li>No transporting sets between venues.</li>
+    </ul>
+  </div>
+
+  <p class="crew-cost__notes">
+    Assumes ${radioOfficialCost} for one traditional radio and headset, {crewSize} officials per
+    crew, and ${proPlusAnnualCost} per year for one Pro+ subscriber per crew. Traditional radios
+    are purchased once and remain usable for the selected period. Optional Tō3 headphones cost
+    ${optionalHeadsetCost} per official and are purchased once. Connectivity, mobile data,
+    repairs, replacements, and future price changes are not included.
+  </p>
+</section>
+
+<script>
+  function initCrewCostCalculators() {
+    const currency = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    });
+    const wholeCurrency = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency: 'USD',
+      maximumFractionDigits: 0,
+    });
+
+    for (const root of document.querySelectorAll<HTMLElement>('[data-crew-cost]')) {
+      const form = root.querySelector<HTMLFormElement>('[data-cost-controls]');
+      if (!form) continue;
+      const controls = form;
+
+      const crewsInput = controls.elements.namedItem('crews');
+      const radioOfficialCostInput = controls.elements.namedItem('radioOfficialCost');
+      const yearsInput = controls.elements.namedItem('years');
+      if (
+        !(crewsInput instanceof HTMLInputElement) ||
+        !(radioOfficialCostInput instanceof HTMLInputElement) ||
+        !(yearsInput instanceof HTMLInputElement)
+      ) {
+        continue;
+      }
+      const crewsControl = crewsInput;
+      const radioOfficialCostControl = radioOfficialCostInput;
+      const yearsControl = yearsInput;
+
+      const crewsOutput = root.querySelector<HTMLOutputElement>('[data-crews-output]');
+      const radioTotal = root.querySelector<HTMLElement>('[data-radio-total]');
+      const radioDetail = root.querySelector<HTMLElement>('[data-radio-detail]');
+      const to3Total = root.querySelector<HTMLElement>('[data-to3-total]');
+      const to3Detail = root.querySelector<HTMLElement>('[data-to3-detail]');
+      const difference = root.querySelector<HTMLElement>('[data-difference]');
+      const differenceLabel = root.querySelector<HTMLElement>('[data-difference-label]');
+      const differenceDetail = root.querySelector<HTMLElement>('[data-difference-detail]');
+
+      const headlineContext = root.querySelector<HTMLElement>('[data-headline-context]');
+      const headlineRadio = root.querySelector<HTMLElement>('[data-headline-radio]');
+      const headlineRadioDetail = root.querySelector<HTMLElement>('[data-headline-radio-detail]');
+      const headlineTo3 = root.querySelector<HTMLElement>('[data-headline-to3]');
+      const headlineTo3Detail = root.querySelector<HTMLElement>('[data-headline-to3-detail]');
+      const radioBar = root.querySelector<HTMLElement>('[data-radio-bar]');
+      const to3Bar = root.querySelector<HTMLElement>('[data-to3-bar]');
+      const savingsHeadline = root.querySelector<HTMLElement>('[data-savings-headline]');
+      const savingsCopy = root.querySelector<HTMLElement>('[data-savings-copy]');
+      const budgetLabel = root.querySelector<HTMLElement>('[data-budget-label]');
+      const budgetRadioCrews = root.querySelector<HTMLElement>('[data-budget-radio-crews]');
+      const budgetTo3Crews = root.querySelector<HTMLElement>('[data-budget-to3-crews]');
+      const budgetCopy = root.querySelector<HTMLElement>('[data-budget-copy]');
+
+      const crewSize = Number(root.dataset.crewSize);
+      const proPlusAnnualCost = Number(root.dataset.proPlusAnnualCost);
+      const optionalHeadsetCost = Number(root.dataset.optionalHeadsetCost);
+
+      function bounded(value: string, min: number, max: number, fallback: number) {
+        if (value.trim() === '') return fallback;
+        const parsed = Number(value);
+        if (!Number.isFinite(parsed)) return fallback;
+        return Math.max(min, Math.min(max, parsed));
+      }
+
+      function update(normalize = false) {
+        const data = new FormData(controls);
+        const crews = Math.round(bounded(crewsControl.value, 1, 60, 10));
+        const radioOfficialCost = bounded(
+          radioOfficialCostControl.value,
+          0,
+          Number.MAX_SAFE_INTEGER,
+          450,
+        );
+        const years = Math.round(bounded(yearsControl.value, 1, 20, 4));
+        const officials = crews * crewSize;
+        const organizationProvidesHeadphones = data.get('headphones') === 'provided';
+        const radios = officials * radioOfficialCost;
+        const headsetPurchase = organizationProvidesHeadphones
+          ? officials * optionalHeadsetCost
+          : 0;
+        const to3 = crews * proPlusAnnualCost * years + headsetPurchase;
+        const savings = radios - to3;
+        const percent = radios > 0 ? Math.round((Math.abs(savings) / radios) * 100) : 0;
+        const maxTotal = Math.max(radios, to3, 1);
+        const to3CostPerCrew = proPlusAnnualCost * years + headsetPurchase / crews;
+        const crewsSupportedByBudget = Math.floor(radios / to3CostPerCrew);
+
+        if (normalize) {
+          crewsControl.value = String(crews);
+          radioOfficialCostControl.value = String(radioOfficialCost);
+          yearsControl.value = String(years);
+        }
+
+        if (crewsOutput) crewsOutput.textContent = `${crews} ${crews === 1 ? 'crew' : 'crews'}`;
+
+        if (headlineContext) {
+          headlineContext.textContent = `${years} ${years === 1 ? 'year' : 'years'} · ${crews} ${crews === 1 ? 'crew' : 'crews'}`;
+        }
+        if (headlineRadio) headlineRadio.textContent = wholeCurrency.format(radios);
+        if (headlineRadioDetail) {
+          headlineRadioDetail.textContent = `${crews} ${crews === 1 ? 'crew' : 'crews'} · ${officials} radios and headsets upfront`;
+        }
+        if (headlineTo3) headlineTo3.textContent = wholeCurrency.format(to3);
+        if (headlineTo3Detail) {
+          headlineTo3Detail.textContent = `${crews} ${crews === 1 ? 'subscription' : 'subscriptions'} · ${years} ${years === 1 ? 'year' : 'years'} · ${organizationProvidesHeadphones ? `${officials} new headphones` : "officials' own headphones"}`;
+        }
+        if (radioBar) radioBar.style.width = `${Math.round((radios / maxTotal) * 100)}%`;
+        if (to3Bar) to3Bar.style.width = `${Math.round((to3 / maxTotal) * 100)}%`;
+
+        if (savingsHeadline) {
+          savingsHeadline.textContent = savings >= 0
+            ? `Save about ${percent}%`
+            : `Tō3 costs about ${percent}% more`;
+        }
+        if (savingsCopy) {
+          savingsCopy.textContent = `${wholeCurrency.format(Math.abs(savings))} ${savings >= 0 ? 'less' : 'more'} over ${years} ${years === 1 ? 'year' : 'years'}${organizationProvidesHeadphones ? ', including new headphones.' : '.'}`;
+        }
+
+        if (budgetLabel) budgetLabel.textContent = `Same ${wholeCurrency.format(radios)} budget`;
+        if (budgetRadioCrews) budgetRadioCrews.textContent = String(crews);
+        if (budgetTo3Crews) budgetTo3Crews.textContent = String(crewsSupportedByBudget);
+        if (budgetCopy) {
+          budgetCopy.textContent = `That is ${crewsSupportedByBudget * crewSize} officials across ${crewsSupportedByBudget} ${crewsSupportedByBudget === 1 ? 'match' : 'matches'}, using one Pro+ subscriber and two Free co-hosts per crew.`;
+        }
+
+        if (radioTotal) radioTotal.textContent = currency.format(radios);
+        if (radioDetail) {
+          radioDetail.textContent = `${officials} radio-and-headset setups`;
+        }
+        if (to3Total) to3Total.textContent = currency.format(to3);
+        if (to3Detail) {
+          to3Detail.textContent = `${crews} ${crews === 1 ? 'subscription' : 'subscriptions'} for ${years} ${years === 1 ? 'year' : 'years'}${headsetPurchase ? ` + ${officials} new headphones` : ''}`;
+        }
+        if (difference) difference.textContent = currency.format(Math.abs(savings));
+        if (differenceLabel) differenceLabel.textContent = savings >= 0 ? 'You save' : 'Tō3 costs more';
+        if (differenceDetail) {
+          differenceDetail.textContent = `${percent}% ${savings >= 0 ? 'less' : 'more'} with Tō3`;
+        }
+      }
+
+      controls.addEventListener('input', () => update(false));
+      controls.addEventListener('change', () => update(true));
+      update();
+    }
+  }
+
+  initCrewCostCalculators();
+</script>
+
+<style>
+  .crew-cost {
+    display: grid;
+    gap: var(--space-6);
+    margin-top: var(--space-7);
+    scroll-margin-top: calc(var(--header-h) + var(--toc-h) + 0.5rem);
+  }
+
+  .crew-cost__intro {
+    display: grid;
+    gap: var(--space-3);
+    max-width: 52rem;
+  }
+
+  .crew-cost__intro > p:last-child,
+  .crew-cost__calculator-copy > p:last-child,
+  .crew-cost__reach > p,
+  .crew-cost__total > p:last-of-type,
+  .crew-cost__results article > p:last-child {
+    color: var(--color-text-muted);
+  }
+
+  .crew-cost__eyebrow,
+  .crew-cost__label {
+    color: var(--color-accent);
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .crew-cost__intro h2 {
+    font-size: clamp(1.65rem, 4vw, 2.35rem);
+  }
+
+  .crew-cost__headline,
+  .crew-cost__results {
+    display: grid;
+    gap: var(--space-4);
+  }
+
+  .crew-cost__total,
+  .crew-cost__results article {
+    display: grid;
+    gap: var(--space-2);
+    padding: var(--space-5);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-bg-card);
+  }
+
+  .crew-cost__total--to3,
+  .crew-cost__result-savings {
+    border-color: color-mix(in srgb, var(--color-accent) 50%, var(--color-border));
+  }
+
+  .crew-cost__number,
+  .crew-cost__result-number,
+  .crew-cost__savings-number,
+  .crew-cost__reach-number {
+    color: var(--color-text);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+  }
+
+  .crew-cost__number {
+    font-size: clamp(2.35rem, 7vw, 4rem);
+  }
+
+  .crew-cost__bar {
+    height: 0.55rem;
+    margin-top: var(--space-3);
+    overflow: hidden;
+    border-radius: 999px;
+    background: var(--color-border);
+  }
+
+  .crew-cost__bar span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--color-text-muted);
+  }
+
+  .crew-cost__total--to3 .crew-cost__bar span {
+    background: var(--color-accent);
+  }
+
+  .crew-cost__savings {
+    display: grid;
+    gap: var(--space-2);
+    padding: var(--space-5);
+    border-radius: var(--radius-lg);
+    background: var(--color-accent);
+    color: var(--color-accent-ink);
+  }
+
+  .crew-cost__savings-number {
+    color: inherit;
+    font-size: clamp(1.75rem, 5vw, 2.75rem);
+  }
+
+  .crew-cost__reach,
+  .crew-cost__calculator,
+  .crew-cost__operations {
+    display: grid;
+    gap: var(--space-5);
+    padding: var(--space-5);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-bg-elevated);
+  }
+
+  .crew-cost__reach-number {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--space-2) var(--space-3);
+    margin-top: var(--space-2);
+    font-size: clamp(1.25rem, 3.5vw, 1.85rem);
+  }
+
+  .crew-cost__reach-number strong {
+    color: var(--color-accent);
+    font-size: 1.65em;
+  }
+
+  .crew-cost__reach-number span {
+    color: var(--color-text-muted);
+    font-size: 0.75em;
+    font-weight: 500;
+  }
+
+  .crew-cost__calculator-copy,
+  .crew-cost__operations > div {
+    display: grid;
+    gap: var(--space-2);
+  }
+
+  .crew-cost__calculator h3,
+  .crew-cost__operations h3 {
+    font-size: clamp(1.25rem, 3vw, 1.6rem);
+  }
+
+  .crew-cost__controls {
+    display: grid;
+    gap: var(--space-4);
+  }
+
+  .crew-cost__controls > label {
+    display: grid;
+    gap: var(--space-2);
+    color: var(--color-text);
+    font-weight: 600;
+  }
+
+  .crew-cost__controls input[type='number'] {
+    width: 100%;
+    min-height: 3rem;
+    padding: 0.6rem 0.75rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.6rem;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font: inherit;
+  }
+
+  .crew-cost__range {
+    grid-column: 1 / -1;
+  }
+
+  .crew-cost__range output {
+    color: var(--color-text);
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+  }
+
+  .crew-cost__range input {
+    width: 100%;
+    accent-color: var(--color-accent);
+  }
+
+  .crew-cost__range-bounds {
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .crew-cost__money-input {
+    position: relative;
+    display: grid;
+    align-items: center;
+  }
+
+  .crew-cost__money-input > span {
+    position: absolute;
+    left: 0.75rem;
+    z-index: 1;
+    color: var(--color-text-muted);
+    pointer-events: none;
+  }
+
+  .crew-cost__money-input input {
+    padding-left: 1.65rem;
+  }
+
+  .crew-cost__headphone-options {
+    display: grid;
+    grid-column: 1 / -1;
+    gap: var(--space-3);
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  .crew-cost__headphone-options legend {
+    margin-bottom: var(--space-2);
+    color: var(--color-text);
+    font-weight: 600;
+  }
+
+  .crew-cost__headphone-options label {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    padding: var(--space-4);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    background: var(--color-bg);
+    cursor: pointer;
+  }
+
+  .crew-cost__headphone-options label:has(input:checked) {
+    border-color: var(--color-accent);
+  }
+
+  .crew-cost__headphone-options input {
+    flex: none;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-top: 0.15rem;
+    accent-color: var(--color-accent);
+  }
+
+  .crew-cost__headphone-options label > span {
+    display: grid;
+    gap: 0.15rem;
+  }
+
+  .crew-cost__headphone-options small {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .crew-cost__result-number {
+    font-size: clamp(1.6rem, 4vw, 2.25rem);
+  }
+
+  .crew-cost__operations ul {
+    display: grid;
+    gap: var(--space-3);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .crew-cost__operations li {
+    position: relative;
+    padding-left: 1.15rem;
+    color: var(--color-text-muted);
+  }
+
+  .crew-cost__operations li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 0.5rem;
+    height: 0.5rem;
+    border: 1px solid var(--color-accent);
+    border-radius: 50%;
+  }
+
+  .crew-cost__notes {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+  }
+
+  @media (min-width: 48rem) {
+    .crew-cost__headline {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .crew-cost__reach,
+    .crew-cost__operations {
+      grid-template-columns: minmax(0, 1.2fr) minmax(16rem, 0.8fr);
+      align-items: center;
+    }
+
+    .crew-cost__controls {
+      grid-template-columns: 1fr 1fr;
+      align-items: end;
+    }
+
+    .crew-cost__headphone-options {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .crew-cost__headphone-options legend {
+      grid-column: 1 / -1;
+    }
+
+    .crew-cost__results {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

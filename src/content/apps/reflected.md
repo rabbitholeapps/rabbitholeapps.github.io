@@ -1,6 +1,7 @@
 ---
 name: ReflectED
 tagline: Teach. Reflect. Grow.
+description: ReflectED turns a session plan and transcript into an evidence-based coaching report for teachers, coaches, and trainers.
 status: In development
 order: 3
 problem: Teachers, coaches, and trainers rarely get frequent observation, objective data, or timely coaching. Most are observed only a few times a year, and evaluations are often subjective and delayed.

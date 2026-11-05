@@ -1,6 +1,7 @@
 ---
 name: Referee IQ
 tagline: Rugby laws, explained in seconds. Anywhere, anytime.
+description: Referee IQ lets players, coaches, and officials ask rugby-law questions in plain language and follow the answer back to official sources.
 status: In development
 order: 6
 problem: Rugby referees carry hundreds of laws, frequent clarifications, and messy edge cases. Learning is scattered across PDFs, forums, and whoever you can text after a match. Judgment takes too long to build that way.
