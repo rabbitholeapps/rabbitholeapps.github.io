@@ -9,7 +9,7 @@ order: 1
 
 # End User License Agreement for Tō3
 
-_Last updated: 2 November 2026_
+_Last updated: 9 November 2026_
 
 This End User License Agreement (“**Agreement**”) is between you (“**you**” or “**User**”) and **Rabbit Hole Apps** (“**we**,” “**us**,” or “**our**”) for the **Tō3** mobile application (“**Tō3**” or the “**App**”).
 
@@ -72,6 +72,12 @@ You represent that:
 We may remove User Content or suspend access that violates this Agreement, applicable law, or creates risk to users or the service.
 
 **Audio and recording:** Live audio is processed in real time to deliver sessions. An eligible primary host may opt to record a session when taking it live. Tō3 displays a persistent notice while recording is active. If you remain in the room, your transmitted audio may be included in the recording and may be used as described above and in the Privacy Policy; leave the room if you do not want your audio recorded.
+
+### 5.1 Recordings, shared events, and account deletion
+
+When an account is deleted, Tō3 deletes a stored event recording when the deleted account was the event's sole host. If an event had other hosts, its shared recording may remain available to eligible remaining hosts and operational ownership of the event may be transferred to one of them. Tō3 removes the deleted account's identifiers from the shared event, but a room-composite recording may still contain that person's voice. A deleted user or remaining host may contact [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com) to request exceptional removal of a shared recording.
+
+Account deletion cancels active web subscriptions without proration and forfeits remaining paid access, subject to the billing terms. Records may be retained when required for legal, security, fraud-prevention, tax, or payment-processing obligations.
 
 ---
 
@@ -143,7 +149,7 @@ This Agreement remains in effect until terminated. We may suspend or terminate y
 
 You may delete your account in the App where that feature is offered. Upon termination, stop using Tō3 and delete all copies from your devices. Sections that by their nature should survive will survive termination.
 
-If you have an active paid subscription, cancel billing on our website before or after account deletion as described in the App and Privacy Policy.
+Deleting your account immediately cancels active billing and forfeits remaining paid access without proration. If you want to retain access through the end of a billing period, cancel renewal through our website without deleting your account, as described in the App and Privacy Policy.
 
 ---
 

@@ -9,7 +9,7 @@ order: 3
 
 # Terms of Use for Tō3
 
-_Last updated: 2 November 2026_
+_Last updated: 9 November 2026_
 
 These Terms of Use (“**Terms**”) are a legal agreement between you (“**you**”) and **Justin Xavier Hale, doing business as Rabbit Hole Apps** (“**we**,” “**us**,” or “**our**”) for the **Tō3** mobile application, related websites (including plan selection and billing pages), and services we provide in connection with Tō3 (collectively, the “**Service**”).
 
@@ -79,7 +79,13 @@ You represent that:
 
 Hosts must use recording only when permitted by applicable law and any event, league, workplace, or organization rules. Hosts are responsible for any additional notice or consent required in their jurisdiction. Event hosts and co-hosts may download a completed recording; listeners do not receive recording access through the App.
 
-### 5.1 Acceptable use
+### 5.1 Recordings, shared events, and account deletion
+
+When an account is deleted, Tō3 deletes a stored event recording when the deleted account was the event's sole host. If an event had other hosts, its shared recording may remain available to eligible remaining hosts and operational ownership of the event may be transferred to one of them. Tō3 removes the deleted account's identifiers from the shared event, but a room-composite recording may still contain that person's voice. A deleted user or remaining host may contact [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com) to request exceptional removal of a shared recording.
+
+Account deletion cancels active web subscriptions without proration and forfeits remaining paid access, subject to the billing terms. Records may be retained when required for legal, security, fraud-prevention, tax, or payment-processing obligations.
+
+### 5.2 Acceptable use
 
 You may not use the Service to:
 

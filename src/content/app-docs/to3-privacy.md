@@ -9,7 +9,7 @@ order: 2
 
 # Privacy Policy for Tō3
 
-_Last updated: 2 November 2026_
+_Last updated: 9 November 2026_
 
 Tō3 (“**we**,” “**our**,” or “**us**”) is published by **Rabbit Hole Apps**. This Privacy Policy explains how we collect, use, share, and protect information when you use the **Tō3** mobile application and related websites (for example, plan selection and billing pages).
 
@@ -146,9 +146,11 @@ We will verify requests and respond within the time required by applicable law.
 
 ## 8. Retention
 
-We retain information as long as needed to provide Tō3 and for legitimate business needs (for example, security, backups, and legal compliance). This currently includes optional event recording files; automatic recording deletion is not currently configured. Event hosts may request removal of a recording by emailing us.
+We retain information as long as needed to provide Tō3 and for legitimate business needs (for example, security, backups, and legal compliance). Tō3 does not currently apply a general automatic retention deadline to all optional event recordings. Event hosts may request removal of a recording by emailing us.
 
-When you delete your account, we delete your Firebase Authentication account and profile, remove your identifier from active rosters and participant records, anonymize your creator display name, and archive events where you were the only remaining creator. Some archived event records may retain a no-longer-active creator identifier. Account deletion does not currently remove a composite event recording that may also contain other participants; contact us to request recording removal. Some records may be retained where law requires.
+When you delete your account, we cancel active subscriptions, delete your Firebase Authentication account and profile, and remove your account identifier from active event, participant, download-ticket, and organization records. If you created a shared event, Tō3 transfers operational ownership to an eligible remaining host when possible; otherwise the event is archived and its creator is anonymized.
+
+If you were the sole host of an event, Tō3 stops any recording still in progress and deletes that event's stored MP3 before completing account deletion. A recording from an event with other hosts may remain because those hosts continue to have an interest in the shared event. We remove your account identifiers from the shared event, but the composite audio may still contain your **voice** if you spoke while recording was active. Contact [rabbitholeapps26@gmail.com](mailto:rabbitholeapps26@gmail.com) to request exceptional removal of a shared recording. Some records may be retained where law requires.
 
 ---
 
